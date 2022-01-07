@@ -59,24 +59,21 @@
 	</svg>
 </template>
 
-<script>
+<script setup>
 import { onMounted } from 'vue';
 
-export default {
-	name: 'Cursor',
-	setup() {
-		// adding the mousemove event listener from the mounted hook
-		onMounted(() => {
-			const cursor = document.querySelector('#cursor');
-			document.addEventListener('mousemove', ({ pageX, pageY }) => {
-				cursor.setAttribute(
-					'style',
-					`top: ${pageY}px; left: ${pageX}px; transform: translate(-50%, -50%)`
-				);
-			});
-		});
-	},
-};
+// adding the mousemove event handler from the mounted hook
+onMounted(() => {
+	const cursor = document.getElementById('cursor');
+
+	document.addEventListener('mousemove', (e) => {
+		const { pageY, pageX } = e;
+		cursor.setAttribute(
+			'style',
+			`top: ${pageY}px; left: ${pageX}px; transform: translate(-50%, -50%)`
+		);
+	});
+});
 </script>
 
 <style></style>
