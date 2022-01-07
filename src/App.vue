@@ -1,5 +1,8 @@
 <template>
-	<div id="cursor" class="w-4 h-8 rounded bg-red-300 shadow absolute"></div>
+	<div
+		id="cursor"
+		class="w-8 h-8 rounded-full bg-red-300 shadow absolute ointer-events-none"
+	></div>
 </template>
 
 <script>
@@ -8,7 +11,6 @@ import HelloWorld from './components/HelloWorld.vue';
 
 export default {
 	name: 'App',
-	setup() {},
 	mounted() {
 		const cursor = document.querySelector('#cursor');
 		document.addEventListener('mousemove', ({ pageX, pageY }) => {
