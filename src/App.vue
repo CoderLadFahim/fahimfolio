@@ -1,4 +1,6 @@
-<template></template>
+<template>
+	<div id="cursor" class="w-4 h-8 rounded bg-red-300 shadow absolute"></div>
+</template>
 
 <script>
 import gsap from 'gsap';
@@ -6,19 +8,21 @@ import HelloWorld from './components/HelloWorld.vue';
 
 export default {
 	name: 'App',
-	setup() {
-		console.log('car');
+	setup() {},
+	mounted() {
+		const cursor = document.querySelector('#cursor');
+		document.addEventListener('mousemove', ({ pageX, pageY }) => {
+			cursor.setAttribute(
+				'style',
+				`top: ${pageY}px; left: ${pageX}px; transform: translate(-50%, -50%);`
+			);
+		});
 	},
 };
 </script>
+
 <style>
-#app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
-	margin-top: 60px;
-	font-family: 'Source Code Pro';
+#cursor {
+	transition: 100ms;
 }
 </style>
