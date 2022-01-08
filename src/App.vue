@@ -33,6 +33,7 @@ export default {
 body {
 	border: 1px solid red;
 	cursor: url('./assets/cursor.svg'), auto;
+	min-height: 100vh;
 }
 
 .pointer {
