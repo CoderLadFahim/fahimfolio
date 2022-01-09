@@ -15,6 +15,7 @@
 			bottom-3
 			transform
 			-translate-x-1/2
+			bg-white
 		"
 	>
 		<div class="nav-item pointer">
@@ -39,6 +40,11 @@
 <script></script>
 
 <style>
+.active {
+	color: #A5A6F6 !important;
+	font-weight: bold;
+}
+
 .nav-item {
 	@apply text-center text-gray-400;
 }

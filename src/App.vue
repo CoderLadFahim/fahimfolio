@@ -36,6 +36,7 @@ export default {
 
 <style>
 body {
+	@apply bg-gray-100;
 	border: 1px solid red;
 	cursor: url('./assets/cursor.svg'), auto;
 	min-height: 100vh;
