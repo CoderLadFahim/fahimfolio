@@ -22,21 +22,15 @@
 		magni aut expedita! Ducimus dolorum delectus quidem commodi error.
 	</p>
 
-	<FontAwesomeIcon :icon="faUserSecret" />
+	<Navbar />
 </template>
 
 <script>
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-
-library.add(faUserSecret);
+import Navbar from './components/Navbar.vue';
 
 export default {
 	name: 'App',
-	components: {
-		FontAwesomeIcon,
-	},
+	components: { Navbar },
 };
 </script>
 
