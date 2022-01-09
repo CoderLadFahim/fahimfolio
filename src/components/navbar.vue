@@ -16,6 +16,10 @@
 			transform
 			-translate-x-1/2
 			bg-white
+			sm:bottom-auto
+			sm:top-3
+			sm:w-3/5
+			md:w-1/2
 		"
 	>
 		<div class="nav-item pointer">
@@ -28,7 +32,7 @@
 		</div>
 		<div class="nav-item pointer">
 			<font-awesome-icon icon="project-diagram" />
-			<p>Project</p>
+			<p>Projects</p>
 		</div>
 		<div class="nav-item pointer">
 			<font-awesome-icon icon="phone" />
@@ -47,6 +51,10 @@
 
 .nav-item {
 	@apply text-center text-gray-400;
+}
+
+.nav-item svg {
+	@apply w-44;
 }
 
 .nav-item p {
