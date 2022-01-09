@@ -1,4 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Code+Pro:wght@400;600&family=Ubuntu+Mono:wght@400;700&display=swap');
+
 /* ./src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ubuntu-mono {
+	font-family: 'Ubuntu Mono';
+	font-weight: 400;
+}
+
+.ubuntu-mono-bold {
+	font-family: 'Ubuntu Mono';
+	font-weight: 700;
+}
+
+.source-code-pro {
+	font-family: 'Source Code Pro';
+	font-weight: 400;
+}
+
+.source-code-pro-bold {
+	font-family: 'Source Code Pro';
+	font-weight: 600;
+}
+
+.fira-code {
+	font-family: 'Fira Code';
+	font-weight: 400;
+}
+
+.fira-code-medium {
+	font-family: 'Fira Code';
+	font-weight: 500;
+}
+
+.fira-code-bold {
+	font-family: 'Fira Code';
+	font-weight: 600;
+}

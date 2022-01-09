@@ -21,11 +21,22 @@
 		Ipsa illo aliquam ipsam beatae beatae maiores Necessitatibus tempore vero
 		magni aut expedita! Ducimus dolorum delectus quidem commodi error.
 	</p>
+
+	<FontAwesomeIcon :icon="faUserSecret" />
 </template>
 
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+library.add(faUserSecret);
+
 export default {
 	name: 'App',
+	components: {
+		FontAwesomeIcon,
+	},
 };
 </script>
 
