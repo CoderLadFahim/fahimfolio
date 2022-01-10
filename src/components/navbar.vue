@@ -23,7 +23,7 @@
 
 <style>
 .nav-styles {
-	@apply border flex shadow justify-between w-11/12 px-4 py-1 rounded-xl fixed left-1/2 bottom-3 transform -translate-x-1/2 bg-white sm:bottom-auto sm:top-3 sm:w-3/5 md:w-1/2 md:py-2 md:px-6 md:rounded-2xl lg:scale-110 lg:top-4 lg:py-3 lg:rounded-2xl xl:rotate-90 xl:translate-x-0 xl:py-3 xl:top-1/2 xl:left-14 xl:-translate-x-1/2 xl:px-10;
+	@apply border flex shadow justify-between w-11/12 px-4 py-1 rounded-xl fixed left-1/2 bottom-3 transform -translate-x-1/2 bg-white sm:bottom-auto sm:top-3 sm:w-3/5 md:w-1/2 md:py-2 md:px-6 md:rounded-2xl lg:scale-110 lg:top-4 lg:py-3 lg:rounded-2xl xl:rotate-90 xl:translate-x-0 xl:py-3 xl:top-1/2 xl:left-14 xl:-translate-x-1/2 xl:px-10 2xl:w-2/5;
 }
 
 .active {
