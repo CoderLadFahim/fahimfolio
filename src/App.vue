@@ -3,11 +3,18 @@
 </template>
 
 <script>
+import { onMounted } from 'vue';
 import Navbar from './components/navbar.vue';
+import Typed from 'typed.js';
 
 export default {
 	name: 'App',
 	components: { Navbar },
+	setup() {
+		onMounted(() => {
+			console.dir(Typed);
+		});
+	},
 };
 </script>
 
