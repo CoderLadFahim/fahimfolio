@@ -1,20 +1,15 @@
 <template>
-	<Navbar />
+	<type-writer />
+	<nav-bar />
 </template>
 
 <script>
-import { onMounted } from 'vue';
 import Navbar from './components/navbar.vue';
-import Typed from 'typed.js';
+import Typewriter from './components/Typewriter.vue';
 
 export default {
 	name: 'App',
-	components: { Navbar },
-	setup() {
-		onMounted(() => {
-			console.dir(Typed);
-		});
-	},
+	components: { 'nav-bar': Navbar, 'type-writer': Typewriter },
 };
 </script>
 
