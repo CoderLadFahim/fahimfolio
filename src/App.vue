@@ -1,15 +1,18 @@
 <template>
-	<type-writer />
+	<landing-page />
 	<nav-bar />
 </template>
 
 <script>
 import Navbar from './components/navbar.vue';
-import Typewriter from './components/Typewriter.vue';
+import LandingPage from './views/LandingPage.vue';
 
 export default {
 	name: 'App',
-	components: { 'nav-bar': Navbar, 'type-writer': Typewriter },
+	components: {
+		'nav-bar': Navbar,
+		'landing-page': LandingPage,
+	},
 };
 </script>
 
