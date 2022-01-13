@@ -2,7 +2,7 @@
 	<div id="skills-slideshow"></div>
 
 	<div id="content">
-		<h1 id="author-title"><span id="first-name">Fahim</span> al Emroz</h1>
+		<h1 id="author-title" class="source-code-pro-bold text-4xl text-gray-600"><span id="first-name" class="source-code-pro-black">Fahim</span> al Emroz</h1>
 
 		<type-writer />
 
@@ -13,7 +13,11 @@
 	</div>
 </template>
 
-<style></style>
+<style>
+#first-name {
+	color: #51c9bf;
+}
+</style>
 
 <script>
 import Typewriter from '../components/Typewriter.vue';
