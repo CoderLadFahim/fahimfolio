@@ -4,9 +4,9 @@
 	</section>
 
 	<form>
-		<app-input></app-input>
-		<app-input></app-input>
-		<app-input></app-input>
+		<app-input labelText="Your name" idMatcher="name" />
+		<app-input labelText="Your business name" idMatcher="business" />
+		<app-input labelText="Email" inputType="email" idMatcher="email" />
 
 		<textarea
 			id=""

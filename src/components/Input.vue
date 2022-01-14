@@ -1,7 +1,7 @@
 <template>
 	<div id="input-wrapper">
-		<input :type="inputType" :id="labelText" />
-		<label :for="labelText" id="label">
+		<input :type="inputType" :id="idMatcher" />
+		<label :for="idMatcher">
 			{{ labelText }}
 		</label>
 	</div>
@@ -17,6 +17,11 @@ export default {
 		},
 		inputType: {
 			type: String,
+			default: 'text',
+		},
+		idMatcher: {
+			type: String,
+			required: true,
 		},
 	},
 };
