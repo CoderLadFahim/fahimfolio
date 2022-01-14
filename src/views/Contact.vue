@@ -1,7 +1,7 @@
 <template>
 	<section
 		id="contact-section"
-		class="w-11/12 mx-auto border border-red-400 flex flex-col items-center"
+		class="w-11/12 mx-auto flex flex-col items-center"
 	>
 		<section-title titleText="Contact.Me" />
 
@@ -55,7 +55,7 @@ export default {
 
 <style>
 .submit-btn {
-	@apply bg-purple-400 hover:bg-purple-300 transition text-white shadow-md rounded-lg py-2 px-4;
+	@apply bg-purple-400 hover:bg-purple-300 transition text-white shadow-md text-sm rounded-lg py-2 px-4;
 }
 
 textarea:focus {
