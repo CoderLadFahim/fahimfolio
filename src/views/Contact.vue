@@ -20,8 +20,18 @@
 			placeholder="Your message here"
 		></textarea>
 
-		<button
-			@click="submitButtonHandler"
+		<input
+			type="hidden"
+			name="_next"
+			value="https://fahimfolio.netlify.app"
+		/>
+
+		<input type="hidden" name="_captcha" value="false" />
+
+		<input
+			type="submit"
+			@click="(e) => e.preventDefault()"
+			value="Get In Touch!"
 			class="
 				bg-purple-400
 				hover:bg-purple-300
@@ -34,9 +44,7 @@
 				py-2
 				px-4
 			"
-		>
-			Get In Touch!
-		</button>
+		/>
 	</form>
 </template>
 
@@ -49,15 +57,6 @@ export default {
 	components: {
 		'section-title': SectionTitle,
 		'app-input': Input,
-	},
-	setup() {
-		const submitButtonHandler = (e) => {
-			e.preventDefault();
-		};
-
-		return {
-			submitButtonHandler,
-		};
 	},
 };
 </script>
