@@ -56,6 +56,6 @@ export default {
 }
 
 textarea:focus {
-@apply border-purple-300;
+	@apply border-purple-300;
 }
 </style>

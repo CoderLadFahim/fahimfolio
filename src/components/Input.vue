@@ -1,5 +1,5 @@
 <template>
-	<div id="input-wrapper" class="w-full border border-2">
+	<div id="input-wrapper" class="border border-2 border-cyan-300">
 		<label
 			:for="idMatcher"
 			class="block source-code-pro text-gray-700 opacity-50"
