@@ -4,9 +4,9 @@
 	</section>
 
 	<form>
-		<app-input></app-input>
-		<app-input></app-input>
-		<app-input></app-input>
+		<app-input labelText="Your name"></app-input>
+		<app-input labelText="Your business name"></app-input>
+		<app-input labelText="Email" inputType="email"></app-input>
 
 		<textarea
 			id=""

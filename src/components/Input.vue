@@ -17,6 +17,7 @@ export default {
 		},
 		inputType: {
 			type: String,
+			default: 'text',
 		},
 	},
 };
