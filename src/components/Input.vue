@@ -1,6 +1,6 @@
 <template>
 	<div id="input-wrapper">
-		<input :type="inputType" :id="idMatcher" />
+		<input :type="inputType" :id="idMatcher" :name="idMatcher" />
 		<label :for="idMatcher">
 			{{ labelText }}
 		</label>

@@ -3,21 +3,25 @@
 		<section-title titleText="Contact.Me" />
 	</section>
 
-	<form>
+	<form
+		action="https://formsubmit.co/fahimalemroz@gmail.com"
+		method="post"
+		class="space-y-4"
+	>
 		<app-input labelText="Your name" idMatcher="name" />
 		<app-input labelText="Your business name" idMatcher="business" />
 		<app-input labelText="Email" inputType="email" idMatcher="email" />
 
 		<textarea
 			id=""
-			name=""
+			name="visitor-message"
 			cols="30"
 			rows="10"
 			placeholder="Your message here"
 		></textarea>
 
 		<button
-			@click.enter="submitButtonHandler"
+			@click="submitButtonHandler"
 			class="
 				bg-purple-400
 				hover:bg-purple-300
