@@ -1,5 +1,8 @@
 <template>
-	<section id="contact-section" class="w-11/12 mx-auto border border-red-400 flex flex-col items-center">
+	<section
+		id="contact-section"
+		class="w-11/12 mx-auto border border-red-400 flex flex-col items-center"
+	>
 		<section-title titleText="Contact.Me" />
 
 		<form
