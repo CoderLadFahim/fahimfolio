@@ -1,9 +1,19 @@
 <template>
-	<div id="input-wrapper">
-		<input :type="inputType" :id="idMatcher" :name="idMatcher" required />
-		<label :for="idMatcher">
+	<div id="input-wrapper" class="border border-2 border-cyan-300">
+		<label
+			:for="idMatcher"
+			class="block source-code-pro text-gray-700 opacity-50"
+		>
 			{{ labelText }}
 		</label>
+
+		<input
+			class="input fira-code-bold outline-none"
+			required
+			:type="inputType"
+			:id="idMatcher"
+			:name="idMatcher"
+		/>
 	</div>
 </template>
 
@@ -26,3 +36,9 @@ export default {
 	},
 };
 </script>
+
+<style>
+.input {
+	color: #51c9bf;
+}
+</style>
