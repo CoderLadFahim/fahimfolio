@@ -1,5 +1,5 @@
 <template>
-	<h1 class="text-center ubuntu-mono-bold text-gray-600 text-base mt-2">
+	<h1 class="text-center ubuntu-mono-bold text-gray-700 text-base mt-2">
 		<span style="color: #51c9bf">&lt;</span>{{ titleText
 		}}<span style="color: #51c9bf">/&gt;</span>
 	</h1>
