@@ -1,5 +1,5 @@
 <template>
-	<h1 class="fira-code-medium text-gray-600">
+	<h1 class="fira-code-medium text-gray-600 text-lg">
 		I am a <span id="type"></span>
 	</h1>
 </template>
@@ -15,6 +15,7 @@ export default {
 			const strings = [
 				`<span style="color: #61DAFB;">React</span> developer.`,
 				`<span class="text-yellow-500">Javascript</span> specialist.`,
+				`<span class="text-red-400">UIUX</span> designer.`,
 				`<span style="color: #41b883;">Vue</span> developer.`,
 				`<span style="color: #37678f;">Pyt</span><span style="color: #f6bc31">hon</span> and <span style="color: #687ab2;">PHP</span> enthusiast.`,
 				`certified <span class="fira-code-bold text-gray-700">Frontend Engineer</span>.`,

@@ -6,9 +6,9 @@
 
 		<type-writer />
 
-		<div id="action-calls">
-			<button id="cv">Download CV</button>
-			<button id="contact">Contact me</button>
+		<div id="action-calls" class="space-x-6">
+			<button id="cv" class="btn-base-styles source-code-pro-bold">Download CV</button>
+			<button id="contact" class="btn-base-styles source-code-pro-bold">Contact me</button>
 		</div>
 	</div>
 </template>
@@ -16,6 +16,19 @@
 <style>
 #first-name {
 	color: #51c9bf;
+}
+
+#contact {
+	color: #06B6D4;
+}
+
+#cv {
+	color: #fff;
+	background: linear-gradient(90deg, #51C9BF 2.5%, #06B6D4 100%)
+}
+
+.btn-base-styles {
+	@apply py-2 px-5 rounded-xl shadow border;
 }
 </style>
 
