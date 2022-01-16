@@ -6,13 +6,11 @@
 <script>
 import Navbar from './components/navbar.vue';
 import Contact from './views/Contact.vue';
-import Typewriter from './components/Typewriter.vue';
 
 export default {
 	name: 'App',
 	components: {
 		'nav-bar': Navbar,
-		'type-writer': Typewriter,
 		'contact-section': Contact,
 	},
 };

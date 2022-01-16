@@ -1,5 +1,6 @@
 <template>
 	<section class="Home w-full">
+
 		<div id="skills-slideshow" class="w-1/2 my-36 mx-auto">
 			<img
 				class="w-48 h-44 mx-auto"
@@ -40,6 +41,7 @@
 </template>
 
 <style>
+
 #first-name {
 	color: #51c9bf;
 }
