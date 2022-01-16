@@ -41,19 +41,28 @@ defineProps({
 	@apply relative h-14;
 }
 
+label,
+label span,
+label::before,
+label::after {
+	@apply transition duration-300;
+}
+
 label {
 	@apply absolute  top-0 bottom-0 left-0 right-0 pointer-events-none;
 }
 
 label span {
-	@apply absolute top-0 pl-1;
-}
-
-input:valid {
+	@apply absolute bottom-0;
 }
 
 input {
 	color: #51c9bf;
-	@apply w-full h-full bg-transparent border pt-9 pl-1;
+	@apply w-full h-full bg-transparent border pt-9;
+}
+
+input:focus + label span {
+	@apply top-1 text-xs font-bold;
+	color: #51c9bf;
 }
 </style>
