@@ -1,17 +1,19 @@
 <template>
-	<landing-page />
+	<contact-section />
 	<nav-bar />
 </template>
 
 <script>
 import Navbar from './components/navbar.vue';
-import Home from './views/Home.vue';
+import Contact from './views/Contact.vue';
+import Typewriter from './components/Typewriter.vue';
 
 export default {
 	name: 'App',
 	components: {
 		'nav-bar': Navbar,
-		'landing-page': Home,
+		'type-writer': Typewriter,
+		'contact-section': Contact,
 	},
 };
 </script>
