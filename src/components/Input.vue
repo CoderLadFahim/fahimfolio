@@ -1,5 +1,13 @@
 <template>
 	<div id="input-wrapper" class="border border-2 border-cyan-300 w-full">
+		<input
+			class="fira-code-bold outline-none pointer"
+			required
+			:type="inputType"
+			:id="idMatcher"
+			:name="idMatcher"
+		/>
+
 		<label
 			:for="idMatcher"
 			class="block source-code-pro text-gray-700 opacity-50"
@@ -8,14 +16,6 @@
 				{{ labelText }}
 			</span>
 		</label>
-
-		<input
-			class="fira-code-bold outline-none pointer"
-			required
-			:type="inputType"
-			:id="idMatcher"
-			:name="idMatcher"
-		/>
 	</div>
 </template>
 
@@ -47,6 +47,9 @@ label {
 
 label span {
 	@apply absolute top-0 pl-1;
+}
+
+input:valid {
 }
 
 input {
