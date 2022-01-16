@@ -1,5 +1,7 @@
 <template>
-	<div id="skills-slideshow"></div>
+	<div id="skills-slideshow">
+		<img v-for="imgSrc in images" :key="imgSrc" :src="imgSrc" :alt="imgSrc" />
+	</div>
 
 	<div id="content">
 		<h1 id="author-title" class="source-code-pro-bold text-4xl text-gray-600">
@@ -46,6 +48,19 @@ export default {
 	name: 'LandingPage',
 	components: {
 		'type-writer': Typewriter,
+	},
+	setup() {
+		const images = [
+			'/src/assets/TechLogos/React-Logo.png',
+			'/src/assets/TechLogos/JS.png',
+			'/src/assets/TechLogos/figma.png',
+			'/src/assets/TechLogos/Vue-Logo.png',
+			'/src/assets/TechLogos/Tailwind.png',
+		];
+
+		return {
+			images,
+		};
 	},
 };
 </script>
