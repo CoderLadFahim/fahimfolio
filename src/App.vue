@@ -5,13 +5,13 @@
 
 <script>
 import Navbar from './components/navbar.vue';
-import LandingPage from './views/LandingPage.vue';
+import Home from './views/Home.vue';
 
 export default {
 	name: 'App',
 	components: {
 		'nav-bar': Navbar,
-		'landing-page': LandingPage,
+		'landing-page': Home,
 	},
 };
 </script>
