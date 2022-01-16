@@ -10,7 +10,7 @@
 			/>
 		</div>
 
-		<div id="content" class="px-6">
+		<div id="content" class="px-6 mt-44 space-y-5">
 			<h1
 				id="author-title"
 				class="source-code-pro-bold text-4xl text-gray-600"
@@ -22,10 +22,16 @@
 			<type-writer />
 
 			<div id="action-calls" class="space-x-6">
-				<button id="cv" class="btn-base-styles source-code-pro-bold">
+				<button
+					id="cv"
+					class="btn-base-styles pointer source-code-pro-bold"
+				>
 					Download CV
 				</button>
-				<button id="contact" class="btn-base-styles source-code-pro-bold">
+				<button
+					id="contact"
+					class="btn-base-styles pointer source-code-pro-bold"
+				>
 					Contact me
 				</button>
 			</div>
@@ -61,6 +67,11 @@ export default {
 		'type-writer': Typewriter,
 	},
 	setup() {
+		const cvBtnClickHandler = () {
+			const downloadLink = 'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download';
+console.log('me')
+		}
+
 		const images = [
 			'/src/assets/SlideShowTechLogos/React-Logo.png',
 			//'/src/assets/SlideShowTechLogos/JS.png',
@@ -71,6 +82,7 @@ export default {
 
 		return {
 			images,
+			cvBtnClickHandler
 		};
 	},
 };
