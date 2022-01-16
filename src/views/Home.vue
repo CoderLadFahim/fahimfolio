@@ -1,7 +1,8 @@
 <template>
-	<section class="Home">
-		<div id="skills-slideshow">
+	<section class="Home w-full">
+		<div id="skills-slideshow" class="w-1/2 my-36 mx-auto">
 			<img
+				class="w-48 h-44 mx-auto"
 				v-for="imgSrc in images"
 				:key="imgSrc"
 				:src="imgSrc"
@@ -9,7 +10,7 @@
 			/>
 		</div>
 
-		<div id="content">
+		<div id="content" class="px-6">
 			<h1
 				id="author-title"
 				class="source-code-pro-bold text-4xl text-gray-600"
@@ -61,11 +62,11 @@ export default {
 	},
 	setup() {
 		const images = [
-			'/src/assets/TechLogos/React-Logo.png',
-			//'/src/assets/TechLogos/JS.png',
-			//'/src/assets/TechLogos/figma.png',
-			//'/src/assets/TechLogos/Vue-Logo.png',
-			//'/src/assets/TechLogos/Tailwind.png',
+			'/src/assets/SlideShowTechLogos/React-Logo.png',
+			//'/src/assets/SlideShowTechLogos/JS.png',
+			//'/src/assets/SlideShowTechLogos/figma.png',
+			//'/src/assets/SlideShowTechLogos/Vue-Logo.png',
+			//'/src/assets/SlideShowTechLogos/Tailwind.png',
 		];
 
 		return {
