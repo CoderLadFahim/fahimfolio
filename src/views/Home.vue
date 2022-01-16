@@ -1,25 +1,35 @@
 <template>
-	<div id="skills-slideshow">
-		<img v-for="imgSrc in images" :key="imgSrc" :src="imgSrc" :alt="imgSrc" />
-	</div>
-
-	<div id="content">
-		<h1 id="author-title" class="source-code-pro-bold text-4xl text-gray-600">
-			<span id="first-name" class="source-code-pro-black">Fahim</span> al
-			Emroz
-		</h1>
-
-		<type-writer />
-
-		<div id="action-calls" class="space-x-6">
-			<button id="cv" class="btn-base-styles source-code-pro-bold">
-				Download CV
-			</button>
-			<button id="contact" class="btn-base-styles source-code-pro-bold">
-				Contact me
-			</button>
+	<section class="Home">
+		<div id="skills-slideshow">
+			<img
+				v-for="imgSrc in images"
+				:key="imgSrc"
+				:src="imgSrc"
+				:alt="imgSrc"
+			/>
 		</div>
-	</div>
+
+		<div id="content">
+			<h1
+				id="author-title"
+				class="source-code-pro-bold text-4xl text-gray-600"
+			>
+				<span id="first-name" class="source-code-pro-black">Fahim</span> al
+				Emroz
+			</h1>
+
+			<type-writer />
+
+			<div id="action-calls" class="space-x-6">
+				<button id="cv" class="btn-base-styles source-code-pro-bold">
+					Download CV
+				</button>
+				<button id="contact" class="btn-base-styles source-code-pro-bold">
+					Contact me
+				</button>
+			</div>
+		</div>
+	</section>
 </template>
 
 <style>
@@ -52,10 +62,10 @@ export default {
 	setup() {
 		const images = [
 			'/src/assets/TechLogos/React-Logo.png',
-			'/src/assets/TechLogos/JS.png',
-			'/src/assets/TechLogos/figma.png',
-			'/src/assets/TechLogos/Vue-Logo.png',
-			'/src/assets/TechLogos/Tailwind.png',
+			//'/src/assets/TechLogos/JS.png',
+			//'/src/assets/TechLogos/figma.png',
+			//'/src/assets/TechLogos/Vue-Logo.png',
+			//'/src/assets/TechLogos/Tailwind.png',
 		];
 
 		return {
