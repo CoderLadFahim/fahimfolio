@@ -52,17 +52,22 @@ label {
 	@apply absolute  top-0 bottom-0 left-0 right-0 pointer-events-none;
 }
 
+label::after {
+	content: '';
+	@apply w-full h-2 bg-purple-400;
+}
+
 label span {
 	@apply absolute bottom-0;
 }
 
 input {
 	color: #51c9bf;
-	@apply w-full h-full bg-transparent border pt-9;
+	@apply w-full h-full bg-transparent  pt-9;
 }
 
-input:focus + label span {
-	@apply top-1 text-xs font-bold;
-	color: #51c9bf;
+input:focus + label span,
+input:valid + label span {
+	@apply top-1 text-xs font-bold text-purple-400;
 }
 </style>
