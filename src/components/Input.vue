@@ -1,7 +1,7 @@
 <template>
 	<div id="input-wrapper" class="w-full">
 		<input
-			class="fira-code-bold outline-none pointer"
+			class="fira-code-bold outline-none text"
 			required
 			:type="inputType"
 			:id="idMatcher"
