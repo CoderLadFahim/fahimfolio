@@ -8,14 +8,14 @@
 		<form
 			action="https://formsubmit.co/fahimalemroz@gmail.com"
 			method="post"
-			class="mt-7 flex flex-col items-center space-y-6"
+			class="mt-7 flex flex-col items-center space-y-8"
 		>
 			<app-input labelText="Your name" idMatcher="name" />
 			<app-input labelText="Your business name" idMatcher="business" />
-			<app-input labelText="Email" inputType="email" idMatcher="email" />
+			<app-input labelText="Email" idMatcher="email" />
 
 			<textarea
-				class="rounded-lg py-2 px-3"
+				class="rounded-lg py-2 px-3 fira-code"
 				name="visitor-message"
 				cols="25"
 				rows="9"
@@ -58,7 +58,11 @@ export default {
 	@apply bg-purple-400 hover:bg-purple-300 transition text-white shadow-md text-sm rounded-lg py-2 px-4;
 }
 
+form textarea {
+	color: #51c9bf;
+}
+
 textarea:focus {
-	@apply border-purple-300;
+	@apply outline-none border-2  border-purple-300;
 }
 </style>
