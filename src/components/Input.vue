@@ -54,6 +54,7 @@ label {
 
 label span {
 	@apply absolute bottom-0;
+	transition: 150ms;
 }
 
 input {
@@ -63,13 +64,14 @@ input {
 
 label::after {
 	content: '';
-	@apply inline-block absolute bottom-0 w-0 bg-purple-400 transition;
+	@apply inline-block absolute bottom-0 w-0 left-1/2 transform -translate-x-1/2 bg-purple-400;
 	height: 2px;
+	transition: 150ms;
 }
 
 input:focus + label span,
 input:valid + label span {
-	@apply top-1 text-xs font-bold text-purple-400;
+	@apply bottom-8 text-xs font-bold text-purple-400;
 }
 
 input:focus + label::after,
