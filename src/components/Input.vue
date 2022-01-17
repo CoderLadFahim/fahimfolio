@@ -1,5 +1,5 @@
 <template>
-	<div id="input-wrapper" class="border w-full">
+	<div id="input-wrapper" class="w-full">
 		<input
 			class="fira-code-bold outline-none pointer"
 			required
@@ -49,7 +49,7 @@ label::after {
 }
 
 label {
-	@apply absolute  top-0 bottom-0 left-0 right-0 pointer-events-none;
+	@apply absolute top-0 bottom-0 left-0 right-0 pointer-events-none border-b-2;
 }
 
 label span {
@@ -58,7 +58,7 @@ label span {
 
 input {
 	color: #51c9bf;
-	@apply w-full h-full bg-transparent  pt-9;
+	@apply w-full h-full bg-transparent  pt-7;
 }
 
 label::after {
