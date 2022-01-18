@@ -10,7 +10,11 @@
 			method="post"
 			class="mt-7 flex flex-col items-center space-y-8"
 		>
-			<app-input labelText="Your name" idMatcher="name" />
+			<app-input
+				labelText="Your name"
+				idMatcher="name"
+				@user-input-change="userInputChangeHandler"
+			/>
 			<app-input labelText="Your business name" idMatcher="business" />
 			<app-input labelText="Email" idMatcher="email" />
 
@@ -53,8 +57,13 @@ export default {
 	},
 	setup() {
 		const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
+		const userInputChangeHandler = ({ value: data }) => {
+			console.log(data);
+		};
+
 		return {
 			emailChecker,
+			userInputChangeHandler,
 		};
 	},
 };
