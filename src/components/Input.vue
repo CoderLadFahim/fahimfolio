@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
 	labelText: {
 		type: String,
 		required: true,
