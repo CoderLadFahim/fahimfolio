@@ -3,7 +3,6 @@
 		<input
 			class="fira-code-bold outline-none text"
 			required
-			:type="inputType"
 			:id="idMatcher"
 			:name="idMatcher"
 		/>
@@ -24,10 +23,6 @@ defineProps({
 	labelText: {
 		type: String,
 		required: true,
-	},
-	inputType: {
-		type: String,
-		default: 'text',
 	},
 	idMatcher: {
 		type: String,

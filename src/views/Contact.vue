@@ -43,12 +43,19 @@
 <script>
 import SectionTitle from '../components/SectionTitle.vue';
 import Input from '../components/Input.vue';
+import { ref } from 'vue';
 
 export default {
 	name: 'Contact',
 	components: {
 		'section-title': SectionTitle,
 		'app-input': Input,
+	},
+	setup() {
+		const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
+		return {
+			emailChecker,
+		};
 	},
 };
 </script>
