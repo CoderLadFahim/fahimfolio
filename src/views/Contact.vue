@@ -13,10 +13,21 @@
 			<app-input
 				labelText="Your name"
 				idMatcher="name"
+				purpose="VISITOR_NAME"
 				@user-input-change="userInputChangeHandler"
 			/>
-			<app-input labelText="Your business name" idMatcher="business" />
-			<app-input labelText="Email" idMatcher="email" />
+			<app-input
+				labelText="Your business name"
+				idMatcher="business"
+				purpose="BUSINESS_NAME"
+				@user-input-change="userInputChangeHandler"
+			/>
+			<app-input
+				labelText="Email"
+				idMatcher="email"
+				purpose="EMAIL"
+				@user-input-change="userInputChangeHandler"
+			/>
 
 			<textarea
 				class="rounded-lg py-2 px-3 fira-code"
@@ -57,7 +68,7 @@ export default {
 	},
 	setup() {
 		const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-		const userInputChangeHandler = ({ value: data }) => {
+		const userInputChangeHandler = (data) => {
 			console.log(data);
 		};
 

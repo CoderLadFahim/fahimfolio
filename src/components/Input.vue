@@ -32,11 +32,15 @@ const props = defineProps({
 		type: String,
 		required: true,
 	},
+	purpose: {
+		type: String,
+	},
 });
 
 const userInput = ref('');
 const emit = defineEmits(['user-input-change']);
-const userInputChangeEmitter = () => emit('user-input-change', userInput);
+const userInputChangeEmitter = () =>
+	emit('user-input-change', { type: props.purpose, userInput });
 </script>
 
 <style scoped>
