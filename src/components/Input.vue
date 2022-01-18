@@ -3,8 +3,10 @@
 		<input
 			class="fira-code-bold outline-none text"
 			required
+			v-model="userInput"
 			:id="idMatcher"
 			:name="idMatcher"
+			@change="userInputChangeEmitter"
 		/>
 
 		<label
@@ -19,6 +21,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
 const props = defineProps({
 	labelText: {
 		type: String,
@@ -29,6 +33,10 @@ const props = defineProps({
 		required: true,
 	},
 });
+
+const userInput = ref('');
+const emit = defineEmits(['user-input-change']);
+const userInputChangeEmitter = () => emit('user-input-change', userInput);
 </script>
 
 <style scoped>
