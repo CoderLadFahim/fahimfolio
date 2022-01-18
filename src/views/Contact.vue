@@ -68,9 +68,9 @@ export default {
 	},
 	setup() {
 		const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-		const userInputChangeHandler = (data) => {
-			console.log(data);
-		};
+		const formDataBits = [];
+
+		const userInputChangeHandler = (data) => formDataBits.push(data);
 
 		return {
 			emailChecker,
