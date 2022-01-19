@@ -8,7 +8,13 @@
 		<form
 			action="https://formsubmit.co/fahimalemroz@gmail.com"
 			method="post"
-			class="mt-7 flex flex-col items-center space-y-8 sm:mt-20 sm:w-3/5"
+			class="
+				mt-7
+				flex flex-col
+				items-center
+				space-y-8
+				sm:mt-20 sm:w-3/5 sm:space-y-16
+			"
 		>
 			<app-input
 				labelText="Your name"
@@ -30,7 +36,15 @@
 			/>
 
 			<textarea
-				class="rounded-lg py-2 px-3 fira-code"
+				class="
+					rounded-lg
+					py-2
+					px-3
+					fira-code
+					sm:w-full sm:h-72
+					shadow
+					sm:py-3 sm:px-4
+				"
 				name="visitor-message"
 				cols="25"
 				rows="9"
