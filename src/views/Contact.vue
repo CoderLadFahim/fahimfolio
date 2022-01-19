@@ -14,6 +14,7 @@
 				items-center
 				space-y-8
 				sm:mt-20 sm:w-3/5 sm:space-y-16
+				lg:w-1/2 lg:mt-36
 			"
 		>
 			<app-input
@@ -44,7 +45,7 @@
 					sm:w-full sm:h-72
 					shadow
 					sm:py-3 sm:px-4
-					md:h-80
+					md:h-80 md:h-96
 				"
 				name="visitor-message"
 				cols="25"
@@ -100,15 +101,7 @@ export default {
 	@apply bg-purple-400 hover:bg-purple-300 transition text-white shadow-md text-sm rounded-lg py-2 px-4;
 }
 
-.textarea-wrapper {
-	@apply relative;
-}
-
-.textarea-wrapper::after {
-	@apply inline-block absolute bottom-0 w-0 left-1/2 transform -translate-x-1/2 bg-purple-400;
-}
-
-.textarea-wrapper textarea {
+form textarea {
 	color: #51c9bf;
 }
 </style>
