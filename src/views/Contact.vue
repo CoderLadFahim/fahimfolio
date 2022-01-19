@@ -44,6 +44,7 @@
 					sm:w-full sm:h-72
 					shadow
 					sm:py-3 sm:px-4
+					md:h-80
 				"
 				name="visitor-message"
 				cols="25"
