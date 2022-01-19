@@ -29,13 +29,15 @@
 				@user-input-change="userInputChangeHandler"
 			/>
 
-			<textarea
-				class="rounded-lg py-2 px-3 fira-code"
-				name="visitor-message"
-				cols="25"
-				rows="9"
-				placeholder="Your message here"
-			></textarea>
+			<div class="textarea-wrapper">
+				<textarea
+					class="rounded-lg py-2 px-3 fira-code"
+					name="visitor-message"
+					cols="25"
+					rows="9"
+					placeholder="Your message here"
+				></textarea>
+			</div>
 
 			<input
 				type="hidden"
@@ -85,11 +87,15 @@ export default {
 	@apply bg-purple-400 hover:bg-purple-300 transition text-white shadow-md text-sm rounded-lg py-2 px-4;
 }
 
-form textarea {
-	color: #51c9bf;
+.textarea-wrapper {
+	@apply relative;
 }
 
-textarea:focus {
-	@apply outline-none border-2  border-purple-300;
+.textarea-wrapper::after {
+	@apply inline-block absolute bottom-0 w-0 left-1/2 transform -translate-x-1/2 bg-purple-400;
+}
+
+.textarea-wrapper textarea {
+	color: #51c9bf;
 }
 </style>
