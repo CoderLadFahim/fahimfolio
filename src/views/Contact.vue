@@ -62,12 +62,13 @@
 
 			<input type="hidden" name="_captcha" value="false" />
 
-			<input
+			<button
 				type="submit"
 				@click="(e) => e.preventDefault()"
-				value="Get In Touch!"
 				class="submit-btn fira-code-bold pointer"
-			/>
+			>
+				Get In Touch!
+			</button>
 		</form>
 	</section>
 </template>
@@ -89,8 +90,14 @@ export default {
 
 		const userInputChangeHandler = (data) => formDataBits.push(data);
 
+		const validateEmail = (emailAddress) => {
+			if (!emailChecker.test(emailAddress)) console.log('wrong');
+			if (emailChecker.test(emailAddress)) console.log('green');
+		};
+
 		watch(formDataBits, () => {
-			console.log(formDataBits);
+			if (formDataBits.length === 3)
+				validateEmail(formDataBits[2].userInput);
 		});
 
 		return {
@@ -115,4 +122,3 @@ form textarea:focus {
 	@apply outline-none border border-purple-400;
 }
 </style>
-}
