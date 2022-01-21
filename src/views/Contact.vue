@@ -21,19 +21,19 @@
 			<app-input
 				labelText="Your name"
 				idMatcher="name"
-				purpose="VISITOR_NAME"
+				field="VISITOR_NAME"
 				@user-input-change="userInputChangeHandler"
 			/>
 			<app-input
 				labelText="Your business name"
 				idMatcher="business"
-				purpose="BUSINESS_NAME"
+				field="BUSINESS_NAME"
 				@user-input-change="userInputChangeHandler"
 			/>
 			<app-input
 				labelText="Email"
 				idMatcher="email"
-				purpose="EMAIL"
+				field="EMAIL"
 				@user-input-change="userInputChangeHandler"
 			/>
 

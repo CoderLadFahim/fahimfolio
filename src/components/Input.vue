@@ -32,15 +32,17 @@ const props = defineProps({
 		type: String,
 		required: true,
 	},
-	purpose: {
+	field: {
 		type: String,
 	},
 });
 
+const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
+
 const userInput = ref('');
 const emit = defineEmits(['user-input-change']);
 const userInputChangeEmitter = () =>
-	emit('user-input-change', { type: props.purpose, userInput });
+	emit('user-input-change', { type: props.field, userInput });
 </script>
 
 <style scoped>
