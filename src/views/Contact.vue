@@ -15,6 +15,7 @@
 				space-y-8
 				sm:mt-20 sm:w-3/5 sm:space-y-16
 				lg:w-1/2 lg:mt-36
+				xl:w-1/3 xl:mt-12
 			"
 		>
 			<app-input
