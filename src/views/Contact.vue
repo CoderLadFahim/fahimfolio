@@ -75,7 +75,7 @@
 <script>
 import SectionTitle from '../components/SectionTitle.vue';
 import Input from '../components/Input.vue';
-import { ref } from 'vue';
+import { reactive, watch } from 'vue';
 
 export default {
 	name: 'Contact',
@@ -85,9 +85,13 @@ export default {
 	},
 	setup() {
 		const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-		const formDataBits = [];
+		const formDataBits = reactive([]);
 
 		const userInputChangeHandler = (data) => formDataBits.push(data);
+
+		watch(formDataBits, () => {
+			console.log(formDataBits);
+		});
 
 		return {
 			emailChecker,
@@ -111,3 +115,4 @@ form textarea:focus {
 	@apply outline-none border border-purple-400;
 }
 </style>
+}
