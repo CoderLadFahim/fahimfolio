@@ -102,6 +102,11 @@ export default {
 }
 
 form textarea {
+	@apply outline-none;
 	color: #51c9bf;
+}
+
+form textarea:focus {
+	@apply outline-none border border-purple-400;
 }
 </style>
