@@ -4,9 +4,9 @@
 			class="fira-code-bold outline-none text"
 			required
 			v-model="userInput"
-			:class="{ disabled: userInputIsValid }"
 			:id="idMatcher"
 			:name="idMatcher"
+			@keyup="() => regexValidator && processChange()"
 		/>
 
 		<label
@@ -41,8 +41,8 @@ const props = defineProps({
 		required: false,
 	},
 });
-
-function debounce(func, timeout = 300) {
+/* Debouncing logic */
+function debounce(func, timeout = 1000) {
 	let timer;
 	return (...args) => {
 		clearTimeout(timer);
@@ -51,8 +51,15 @@ function debounce(func, timeout = 300) {
 		}, timeout);
 	};
 }
+
 function saveInput() {
-	console.log('Saving data');
+	const input = document.getElementById(props.idMatcher);
+	const inputClasses = Array.from(input.classList);
+	inputClasses.includes('disabled') ? input.classList.remove('disabled') : '';
+
+	!props.regexValidator.test(userInput.value)
+		? input.classList.add('disabled')
+		: '';
 }
 const processChange = debounce(() => saveInput());
 </script>
