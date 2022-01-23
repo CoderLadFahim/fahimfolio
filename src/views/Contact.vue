@@ -76,7 +76,7 @@
 <script>
 import SectionTitle from '../components/SectionTitle.vue';
 import Input from '../components/Input.vue';
-import { reactive, watch } from 'vue';
+import { reactive, ref, watch } from 'vue';
 
 export default {
 	name: 'Contact',
@@ -85,23 +85,21 @@ export default {
 		'app-input': Input,
 	},
 	setup() {
-		const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
 		const formDataBits = reactive([]);
+		let emailValid = ref(false);
 
 		const userInputChangeHandler = (data) => formDataBits.push(data);
 
-		const validateEmail = (emailAddress) => {
-			if (!emailChecker.test(emailAddress)) console.log('wrong');
-			if (emailChecker.test(emailAddress)) console.log('green');
-		};
-
 		watch(formDataBits, () => {
-			if (formDataBits.length === 3)
-				validateEmail(formDataBits[2].userInput);
+			if (formDataBits.length !== 3) return;
+			const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
+			const emailInput = formDataBits[2].userInput;
+
+			emailValid.value = emailChecker.test(emailInput);
 		});
 
 		return {
-			emailChecker,
+			emailValid,
 			userInputChangeHandler,
 		};
 	},
