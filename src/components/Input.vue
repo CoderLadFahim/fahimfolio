@@ -4,6 +4,7 @@
 			class="fira-code-bold outline-none text"
 			required
 			v-model="userInput"
+			:class="{ disabled: userInputIsValid }"
 			:id="idMatcher"
 			:name="idMatcher"
 		/>
@@ -21,6 +22,7 @@
 
 <script setup>
 import { ref } from 'vue';
+const userInput = ref('');
 
 const props = defineProps({
 	labelText: {
@@ -39,6 +41,20 @@ const props = defineProps({
 		required: false,
 	},
 });
+
+function debounce(func, timeout = 300) {
+	let timer;
+	return (...args) => {
+		clearTimeout(timer);
+		timer = setTimeout(() => {
+			func.apply(this, args);
+		}, timeout);
+	};
+}
+function saveInput() {
+	console.log('Saving data');
+}
+const processChange = debounce(() => saveInput());
 </script>
 
 <style scoped>
@@ -75,5 +91,8 @@ input:valid + label span {
 input:focus + label::after,
 input:valid + label::after {
 	@apply w-full;
+}
+.disabled {
+	@apply text-red-500;
 }
 </style>
