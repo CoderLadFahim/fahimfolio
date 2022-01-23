@@ -114,3 +114,4 @@ form textarea:focus {
 	@apply bg-gray-400;
 }
 </style>
+} }
