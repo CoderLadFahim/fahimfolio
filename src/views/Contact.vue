@@ -23,20 +23,13 @@
 				labelText="Your name"
 				idMatcher="name"
 				field="VISITOR_NAME"
-				@user-input-change="userInputChangeHandler"
 			/>
 			<app-input
 				labelText="Your business name"
 				idMatcher="business"
 				field="BUSINESS_NAME"
-				@user-input-change="userInputChangeHandler"
 			/>
-			<app-input
-				labelText="Email"
-				idMatcher="email"
-				field="EMAIL"
-				@user-input-change="userInputChangeHandler"
-			/>
+			<app-input labelText="Email" idMatcher="email" field="EMAIL" />
 
 			<textarea
 				class="
@@ -68,7 +61,6 @@
 				type="submit"
 				@click="formSubmitHandler"
 				class="submit-btn fira-code-bold pointer"
-				:class="{ disabled: !emailValid }"
 			>
 				Get In Touch!
 			</button>
@@ -86,34 +78,6 @@ export default {
 	components: {
 		'section-title': SectionTitle,
 		'app-input': Input,
-	},
-	setup() {
-		const formDataBits = reactive([]);
-		let emailValid = ref(false);
-
-		const userInputChangeHandler = (data) => formDataBits.push(data);
-
-		const formSubmitHandler = (e) => {
-			e.preventDefault();
-
-			!emailValid.value
-				? alert('Invalid email')
-				: document.contactForm.submit();
-		};
-
-		watch(formDataBits, () => {
-			if (formDataBits.length !== 3) return;
-			const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-			const emailInput = formDataBits[2].userInput;
-
-			emailValid.value = emailChecker.test(emailInput);
-		});
-
-		return {
-			emailValid,
-			userInputChangeHandler,
-			formSubmitHandler,
-		};
 	},
 };
 </script>

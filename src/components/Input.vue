@@ -6,7 +6,6 @@
 			v-model="userInput"
 			:id="idMatcher"
 			:name="idMatcher"
-			@change="userInputChangeEmitter"
 		/>
 
 		<label
@@ -36,13 +35,6 @@ const props = defineProps({
 		type: String,
 	},
 });
-
-const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-
-const userInput = ref('');
-const emit = defineEmits(['user-input-change']);
-const userInputChangeEmitter = () =>
-	emit('user-input-change', { type: props.field, userInput });
 </script>
 
 <style scoped>
