@@ -66,6 +66,7 @@
 				type="submit"
 				@click="(e) => e.preventDefault()"
 				class="submit-btn fira-code-bold pointer"
+				:class="{ disabled: !emailValid }"
 			>
 				Get In Touch!
 			</button>
@@ -118,5 +119,9 @@ form textarea {
 
 form textarea:focus {
 	@apply outline-none border border-purple-400;
+}
+
+.disabled {
+	@apply bg-gray-600;
 }
 </style>
