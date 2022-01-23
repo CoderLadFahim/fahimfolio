@@ -7,6 +7,7 @@
 
 		<form
 			action="https://formsubmit.co/fahimalemroz@gmail.com"
+			name="contactForm"
 			method="post"
 			class="
 				mt-7
@@ -49,6 +50,7 @@
 					md:h-80 md:h-96
 				"
 				name="visitor-message"
+				required
 				cols="25"
 				rows="9"
 				placeholder="Your message here"
@@ -64,7 +66,7 @@
 
 			<button
 				type="submit"
-				@click="(e) => e.preventDefault()"
+				@click="formSubmitHandler"
 				class="submit-btn fira-code-bold pointer"
 				:class="{ disabled: !emailValid }"
 			>
@@ -91,6 +93,14 @@ export default {
 
 		const userInputChangeHandler = (data) => formDataBits.push(data);
 
+		const formSubmitHandler = (e) => {
+			e.preventDefault();
+
+			!emailValid.value
+				? alert('Invalid email')
+				: document.contactForm.submit();
+		};
+
 		watch(formDataBits, () => {
 			if (formDataBits.length !== 3) return;
 			const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
@@ -102,6 +112,7 @@ export default {
 		return {
 			emailValid,
 			userInputChangeHandler,
+			formSubmitHandler,
 		};
 	},
 };
@@ -122,6 +133,6 @@ form textarea:focus {
 }
 
 .disabled {
-	@apply bg-gray-600;
+	@apply bg-gray-400;
 }
 </style>
