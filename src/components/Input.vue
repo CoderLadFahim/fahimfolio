@@ -34,6 +34,10 @@ const props = defineProps({
 	field: {
 		type: String,
 	},
+	regexValidator: {
+		type: Object,
+		required: false,
+	},
 });
 </script>
 
