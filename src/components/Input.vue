@@ -6,7 +6,8 @@
 			v-model="userInput"
 			:id="idMatcher"
 			:name="idMatcher"
-			@keyup="() => regexValidator && processChange()"
+			@keydown="(e) => (e.keyCode === 8 ? removeDisabledClass() : '')"
+			@keyup="(e) => regexValidator && processChange()"
 		/>
 
 		<label
@@ -41,8 +42,12 @@ const props = defineProps({
 		required: false,
 	},
 });
+
 /* Debouncing logic */
-function debounce(func, timeout = 1000) {
+const removeDisabledClass = () =>
+	document.getElementById(props.idMatcher).classList.remove('disabled');
+
+function debounce(func, timeout = 500) {
 	let timer;
 	return (...args) => {
 		clearTimeout(timer);
@@ -52,7 +57,7 @@ function debounce(func, timeout = 1000) {
 	};
 }
 
-function saveInput() {
+function handleUserInput() {
 	const input = document.getElementById(props.idMatcher);
 	const inputClasses = Array.from(input.classList);
 	inputClasses.includes('disabled') ? input.classList.remove('disabled') : '';
@@ -61,7 +66,7 @@ function saveInput() {
 		? input.classList.add('disabled')
 		: '';
 }
-const processChange = debounce(() => saveInput());
+const processChange = debounce(() => handleUserInput());
 </script>
 
 <style scoped>
