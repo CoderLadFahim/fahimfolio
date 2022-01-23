@@ -52,7 +52,7 @@ label {
 
 label span {
 	@apply absolute bottom-0;
-	transition: 250ms;
+	transition: 300ms;
 }
 
 input {
@@ -64,7 +64,7 @@ label::after {
 	content: '';
 	@apply inline-block absolute bottom-0 w-0 left-1/2 transform -translate-x-1/2 bg-purple-400;
 	height: 2px;
-	transition: 250ms;
+	transition: 300ms;
 }
 
 input:focus + label span,
