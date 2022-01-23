@@ -23,13 +23,21 @@
 				labelText="Your name"
 				idMatcher="name"
 				field="VISITOR_NAME"
+				:regexValidator="regices.name"
 			/>
+
 			<app-input
 				labelText="Your business name"
 				idMatcher="business"
 				field="BUSINESS_NAME"
 			/>
-			<app-input labelText="Email" idMatcher="email" field="EMAIL" />
+
+			<app-input
+				labelText="Email"
+				idMatcher="email"
+				field="EMAIL"
+				:regexValidator="regices.email"
+			/>
 
 			<textarea
 				class="
@@ -57,11 +65,7 @@
 
 			<input type="hidden" name="_captcha" value="false" />
 
-			<button
-				type="submit"
-				@click="formSubmitHandler"
-				class="submit-btn fira-code-bold pointer"
-			>
+			<button type="submit" class="submit-btn fira-code-bold pointer">
 				Get In Touch!
 			</button>
 		</form>
@@ -78,6 +82,16 @@ export default {
 	components: {
 		'section-title': SectionTitle,
 		'app-input': Input,
+	},
+	setup() {
+		const regices = {
+			name: /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/,
+			email: /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/,
+		};
+
+		return {
+			regices,
+		};
 	},
 };
 </script>
@@ -100,3 +114,4 @@ form textarea:focus {
 	@apply bg-gray-400;
 }
 </style>
+} }

@@ -34,19 +34,16 @@ const props = defineProps({
 	field: {
 		type: String,
 	},
+	regexValidator: {
+		type: Object,
+		required: false,
+	},
 });
 </script>
 
 <style scoped>
 #input-wrapper {
 	@apply relative h-14;
-}
-
-label,
-label span,
-label::before,
-label::after {
-	@apply transition duration-300;
 }
 
 label {
