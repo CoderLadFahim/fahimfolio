@@ -1,27 +1,42 @@
 <template>
-	<div id="skills-slideshow" class="w-1/2 my-36 mx-auto relative border border-green-400 h-52">
+	<div
+		id="skills-slideshow"
+		class="
+			w-1/2
+			my-36
+			mx-auto
+			relative
+			h-52
+			transform
+			sm:absolute sm:bottom-14 sm:right-16 sm:scale-90
+		"
+	>
 		<img
-			class="mx-auto absolute"
-			v-for="imgSrc in images"
-			:key="imgSrc"
-			:src="imgSrc"
-			:alt="imgSrc"
+			:src="images[Math.floor(Math.random() * images.length)]"
+			alt=""
+			class=""
 		/>
 	</div>
 </template>
 
 <script setup>
+import { onBeforeMount } from 'vue';
+
 const images = [
-	  	'/src/assets/SlideShowTechLogos/React.png',  
-	  	'/src/assets/SlideShowTechLogos/JS.png',  
-	  	'/src/assets/SlideShowTechLogos/Figma.png',  
-	  	'/src/assets/SlideShowTechLogos/Vue.png',  
-  	'/src/assets/SlideShowTechLogos/Tailwind.png',  
+	'/src/assets/SlideShowTechLogos/React.png',
+	/* 	'/src/assets/SlideShowTechLogos/JS.png', */
+	/* 	'/src/assets/SlideShowTechLogos/Figma.png', */
+	/* 	'/src/assets/SlideShowTechLogos/Vue.png', */
+	/* 	'/src/assets/SlideShowTechLogos/Tailwind.png', */
 ];
 </script>
 
 <style>
 .tech-logo {
 	@apply opacity-0;
+}
+
+.show {
+	opacity: 1;
 }
 </style>
