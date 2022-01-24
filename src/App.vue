@@ -21,11 +21,11 @@ export default {
 
 <style>
 body {
-	@apply bg-gray-100 border border-4 border-blue-600;
+	@apply bg-gray-100 ;
 	cursor: url('./assets/cursor.svg'), auto;
 }
 body section {
-	@apply h-screen;
+	@apply h-screen border border-4 border-blue-600;
 }
 
 .pointer {

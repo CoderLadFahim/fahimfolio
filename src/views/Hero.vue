@@ -1,17 +1,8 @@
 <template>
 	<section class="Hero">
-		<!-- <div id="skills-slideshow" class="w-1/2 my-36 mx-auto"> -->
-		<!-- 	<img -->
-		<!-- 		class="w-48 h-44 mx-auto" -->
-		<!-- 		v-for="imgSrc in images" -->
-		<!-- 		:key="imgSrc" -->
-		<!-- 		:src="imgSrc" -->
-		<!-- 		:alt="imgSrc" -->
-		<!-- 	/> -->
-		<!-- </div> -->
 		<Slideshow />
 
-		<div id="content" class="px-6 mt-44 space-y-5">
+		<div id="content" class="px-6 space-y-5">
 			<h1
 				id="author-title"
 				class="source-code-pro-bold text-4xl text-gray-600"
