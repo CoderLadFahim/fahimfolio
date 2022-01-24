@@ -1,4 +1,5 @@
 <template>
+	<hero-section />
 	<contact-section />
 	<nav-bar />
 </template>
@@ -6,11 +7,13 @@
 <script>
 import Navbar from './components/navbar.vue';
 import Contact from './views/Contact.vue';
+import Hero from './views/Hero.vue';
 
 export default {
 	name: 'App',
 	components: {
 		'nav-bar': Navbar,
+		'hero-section': Hero,
 		'contact-section': Contact,
 	},
 };
