@@ -10,6 +10,7 @@
 			transform
 			sm:absolute sm:bottom-14 sm:right-16 sm:scale-90
 			md:right-10
+			lg:right-0
 		"
 	>
 		<img
