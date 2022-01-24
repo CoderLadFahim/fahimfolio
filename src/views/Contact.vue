@@ -109,9 +109,4 @@ form textarea {
 form textarea:focus {
 	@apply outline-none border border-purple-400;
 }
-
-.disabled {
-	@apply bg-gray-400;
-}
 </style>
-} }

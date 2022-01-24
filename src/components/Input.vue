@@ -6,7 +6,7 @@
 			v-model="userInput"
 			:id="idMatcher"
 			:name="idMatcher"
-			@keydown="(e) => (e.keyCode === 8 ? removeDisabledClass() : '')"
+			@keydown="removeDisabledClass"
 			@keyup="(e) => regexValidator && handleKeyUp()"
 		/>
 
@@ -44,10 +44,11 @@ const props = defineProps({
 });
 
 /* Debouncing logic */
+
 const removeDisabledClass = () =>
 	document.getElementById(props.idMatcher).classList.remove('disabled');
 
-function debounce(func, timeout = 2000) {
+function debounce(func, timeout = 1000) {
 	let timer;
 	return (...args) => {
 		clearTimeout(timer);
@@ -59,9 +60,12 @@ function debounce(func, timeout = 2000) {
 
 function handleUserInput() {
 	const input = document.getElementById(props.idMatcher);
+
+	/*returning out of the function if the input has no value*/
 	if (!input.value) return;
-	const inputClasses = Array.from(input.classList);
-	inputClasses.includes('disabled') ? input.classList.remove('disabled') : '';
+
+	/*	const inputClasses = Array.from(input.classList);
+	inputClasses.includes('disabled') ? removeDisabledClass() : '';*/
 
 	!props.regexValidator.test(userInput.value)
 		? input.classList.add('disabled')
@@ -86,7 +90,7 @@ label span {
 
 input {
 	color: #51c9bf;
-	@apply w-full h-full bg-transparent  pt-7;
+	@apply w-full h-full bg-transparent  pt-7 transition duration-75;
 }
 
 label::after {
@@ -106,6 +110,6 @@ input:valid + label::after {
 	@apply w-full;
 }
 .disabled {
-	@apply text-red-500;
+	@apply text-red-400;
 }
 </style>
