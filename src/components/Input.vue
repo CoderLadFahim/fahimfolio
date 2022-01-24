@@ -43,10 +43,15 @@ const props = defineProps({
 	},
 });
 
+const emit = defineEmits(['user-input']);
+
 /* Debouncing logic */
 
-const removeDisabledClass = () =>
-	document.getElementById(props.idMatcher).classList.remove('disabled');
+const removeDisabledClass = () => {
+	const input = document.getElementById(props.idMatcher);
+	emit('user-input', false);
+	input.classList.remove('disabled');
+};
 
 function debounce(func, timeout = 1000) {
 	let timer;
@@ -70,7 +75,13 @@ function handleUserInput() {
 	!props.regexValidator.test(userInput.value)
 		? input.classList.add('disabled')
 		: '';
+
+	if (!props.regexValidator.test(userInput.value)) {
+		input.classList.add('disabled');
+		emit('user-input', true);
+	}
 }
+
 const handleKeyUp = debounce(() => handleUserInput());
 </script>
 
