@@ -24,6 +24,7 @@
 			<div id="action-calls" class="space-x-6">
 				<button
 					id="cv"
+					@click="cvBtnClickHandler"
 					class="btn-base-styles pointer source-code-pro-bold"
 				>
 					Download CV
@@ -45,7 +46,7 @@ import Typewriter from '../components/Typewriter.vue';
 const cvBtnClickHandler = () => {
 	const downloadLink =
 		'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download';
-	console.log('me');
+	window.open(downloadLink, '_blank');
 };
 
 const images = [
