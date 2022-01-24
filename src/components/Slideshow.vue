@@ -24,10 +24,10 @@ import { onBeforeMount } from 'vue';
 
 const images = [
 	'/src/assets/SlideShowTechLogos/React.png',
-	/* 	'/src/assets/SlideShowTechLogos/JS.png', */
-	/* 	'/src/assets/SlideShowTechLogos/Figma.png', */
-	/* 	'/src/assets/SlideShowTechLogos/Vue.png', */
-	/* 	'/src/assets/SlideShowTechLogos/Tailwind.png', */
+	'/src/assets/SlideShowTechLogos/JS.png',
+	'/src/assets/SlideShowTechLogos/Figma.png',
+	'/src/assets/SlideShowTechLogos/Vue.png',
+	'/src/assets/SlideShowTechLogos/Tailwind.png',
 ];
 </script>
 

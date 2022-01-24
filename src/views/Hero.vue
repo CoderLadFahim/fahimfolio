@@ -2,13 +2,13 @@
 	<section class="Hero">
 		<Slideshow />
 
-		<div id="content" class="px-6 space-y-5">
+		<div id="content" class="px-6 space-y-5 sm:px-11 mt-44">
 			<h1
 				id="author-title"
-				class="source-code-pro-bold text-4xl text-gray-600"
+				class="source-code-pro-bold text-4xl text-gray-600 sm:text-5xl"
 			>
-				<span id="first-name" class="source-code-pro-black">Fahim</span> al
-				Emroz
+				<span id="first-name" class="source-code-pro-black">Fahim</span>
+				al Emroz
 			</h1>
 
 			<Typewriter />
@@ -49,19 +49,11 @@ const cvBtnClickHandler = () => {
 		'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download';
 	window.open(downloadLink, '_blank');
 };
-
-const images = [
-	'/src/assets/SlideShowTechLogos/React-Logo.png',
-	//'/src/assets/SlideShowTechLogos/JS.png',
-	//'/src/assets/SlideShowTechLogos/figma.png',
-	//'/src/assets/SlideShowTechLogos/Vue-Logo.png',
-	//'/src/assets/SlideShowTechLogos/Tailwind.png',
-];
 </script>
 
 <style>
 #first-name {
-	color: #51c9bf;
+	color: #06b6d4;
 }
 
 #contact-btn {
