@@ -25,7 +25,15 @@
 				<button
 					id="cv"
 					@click="cvBtnClickHandler"
-					class="btn-base-styles pointer source-code-pro-bold"
+					class="
+						btn-base-styles
+						pointer
+						source-code-pro-bold
+						transition
+						ease-out
+						transform
+						hover:scale-110
+					"
 				>
 					Download CV
 				</button>
