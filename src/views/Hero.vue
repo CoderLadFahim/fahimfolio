@@ -1,14 +1,15 @@
 <template>
 	<section class="Hero">
-		<div id="skills-slideshow" class="w-1/2 my-36 mx-auto">
-			<img
-				class="w-48 h-44 mx-auto"
-				v-for="imgSrc in images"
-				:key="imgSrc"
-				:src="imgSrc"
-				:alt="imgSrc"
-			/>
-		</div>
+		<!-- <div id="skills-slideshow" class="w-1/2 my-36 mx-auto"> -->
+		<!-- 	<img -->
+		<!-- 		class="w-48 h-44 mx-auto" -->
+		<!-- 		v-for="imgSrc in images" -->
+		<!-- 		:key="imgSrc" -->
+		<!-- 		:src="imgSrc" -->
+		<!-- 		:alt="imgSrc" -->
+		<!-- 	/> -->
+		<!-- </div> -->
+		<Slideshow />
 
 		<div id="content" class="px-6 mt-44 space-y-5">
 			<h1
@@ -23,7 +24,7 @@
 
 			<div id="action-calls" class="space-x-6">
 				<button
-					id="cv"
+					id="cv-download-btn"
 					@click="cvBtnClickHandler"
 					class="
 						btn-base-styles
@@ -38,7 +39,7 @@
 					Download CV
 				</button>
 				<button
-					id="contact"
+					id="contact-btn"
 					class="btn-base-styles pointer source-code-pro-bold"
 				>
 					Contact me
@@ -50,6 +51,7 @@
 
 <script setup>
 import Typewriter from '../components/Typewriter.vue';
+import Slideshow from '../components/Slideshow.vue';
 
 const cvBtnClickHandler = () => {
 	const downloadLink =
@@ -71,11 +73,11 @@ const images = [
 	color: #51c9bf;
 }
 
-#contact {
+#contact-btn {
 	color: #06b6d4;
 }
 
-#cv {
+#cv-download-btn {
 	color: #fff;
 	background: linear-gradient(90deg, #51c9bf 2.5%, #06b6d4 100%);
 }
