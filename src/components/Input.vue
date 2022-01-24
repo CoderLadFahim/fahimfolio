@@ -7,7 +7,7 @@
 			:id="idMatcher"
 			:name="idMatcher"
 			@keydown="(e) => (e.keyCode === 8 ? removeDisabledClass() : '')"
-			@keyup="(e) => regexValidator && processChange()"
+			@keyup="(e) => regexValidator && handleKeyUp()"
 		/>
 
 		<label
@@ -47,7 +47,7 @@ const props = defineProps({
 const removeDisabledClass = () =>
 	document.getElementById(props.idMatcher).classList.remove('disabled');
 
-function debounce(func, timeout = 500) {
+function debounce(func, timeout = 2000) {
 	let timer;
 	return (...args) => {
 		clearTimeout(timer);
@@ -59,6 +59,7 @@ function debounce(func, timeout = 500) {
 
 function handleUserInput() {
 	const input = document.getElementById(props.idMatcher);
+	if (!input.value) return;
 	const inputClasses = Array.from(input.classList);
 	inputClasses.includes('disabled') ? input.classList.remove('disabled') : '';
 
@@ -66,7 +67,7 @@ function handleUserInput() {
 		? input.classList.add('disabled')
 		: '';
 }
-const processChange = debounce(() => handleUserInput());
+const handleKeyUp = debounce(() => handleUserInput());
 </script>
 
 <style scoped>
