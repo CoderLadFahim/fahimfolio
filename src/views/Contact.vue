@@ -23,12 +23,14 @@
 				labelText="Your name"
 				idMatcher="name"
 				field="VISITOR_NAME"
+				@user-input="handleUserInput"
 				:regexValidator="regices.name"
 			/>
 
 			<app-input
 				labelText="Your business name"
 				idMatcher="business"
+				:isRequired="true"
 				field="BUSINESS_NAME"
 			/>
 
@@ -36,6 +38,7 @@
 				labelText="Email"
 				idMatcher="email"
 				field="EMAIL"
+				@user-input="handleUserInput"
 				:regexValidator="regices.email"
 			/>
 
@@ -65,7 +68,11 @@
 
 			<input type="hidden" name="_captcha" value="false" />
 
-			<button type="submit" class="submit-btn fira-code-bold pointer">
+			<button
+				type="submit"
+				class="submit-btn fira-code-bold pointer"
+				:class="{ disabled: userInputIsInvalid }"
+			>
 				Get In Touch!
 			</button>
 		</form>
@@ -75,7 +82,7 @@
 <script>
 import SectionTitle from '../components/SectionTitle.vue';
 import Input from '../components/Input.vue';
-import { reactive, ref, watch } from 'vue';
+import { ref } from 'vue';
 
 export default {
 	name: 'Contact',
@@ -88,15 +95,22 @@ export default {
 			name: /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/,
 			email: /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/,
 		};
+		const userInputIsInvalid = ref(true);
+
+		const handleUserInput = (eventData) => {
+			userInputIsInvalid.value = eventData;
+		};
 
 		return {
 			regices,
+			handleUserInput,
+			userInputIsInvalid,
 		};
 	},
 };
 </script>
 
-<style>
+<style scoped>
 .submit-btn {
 	@apply bg-purple-400 hover:bg-purple-300 transition text-white shadow-md text-sm rounded-lg py-2 px-4;
 }
@@ -108,5 +122,9 @@ form textarea {
 
 form textarea:focus {
 	@apply outline-none border border-purple-400;
+}
+
+.disabled {
+	@apply bg-gray-800 opacity-50 pointer-events-none;
 }
 </style>

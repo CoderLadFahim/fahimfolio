@@ -34,9 +34,6 @@ const props = defineProps({
 		type: String,
 		required: true,
 	},
-	field: {
-		type: String,
-	},
 	regexValidator: {
 		type: Object,
 		required: false,
@@ -71,10 +68,6 @@ function handleUserInput() {
 
 	/*	const inputClasses = Array.from(input.classList);
 	inputClasses.includes('disabled') ? removeDisabledClass() : '';*/
-
-	!props.regexValidator.test(userInput.value)
-		? input.classList.add('disabled')
-		: '';
 
 	if (!props.regexValidator.test(userInput.value)) {
 		input.classList.add('disabled');
