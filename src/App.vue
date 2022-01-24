@@ -23,7 +23,9 @@ export default {
 body {
 	@apply bg-gray-100 border border-4 border-blue-600;
 	cursor: url('./assets/cursor.svg'), auto;
-	min-height: 100vh;
+}
+body section {
+	@apply h-screen;
 }
 
 .pointer {

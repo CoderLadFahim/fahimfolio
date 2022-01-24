@@ -1,5 +1,5 @@
 <template>
-	<section class="Home w-full">
+	<section class="Hero">
 		<div id="skills-slideshow" class="w-1/2 my-36 mx-auto">
 			<img
 				class="w-48 h-44 mx-auto"
@@ -19,7 +19,7 @@
 				Emroz
 			</h1>
 
-			<type-writer />
+			<Typewriter />
 
 			<div id="action-calls" class="space-x-6">
 				<button
@@ -41,6 +41,7 @@
 
 <script setup>
 import Typewriter from '../components/Typewriter.vue';
+
 const cvBtnClickHandler = () => {
 	const downloadLink =
 		'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download';
