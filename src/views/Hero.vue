@@ -1,5 +1,5 @@
 <template>
-	<section class="Hero">
+	<section class="Hero sm:relative">
 		<Slideshow />
 
 		<div id="content" class="px-6 space-y-5 sm:px-11 mt-44">

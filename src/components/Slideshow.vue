@@ -5,12 +5,11 @@
 			w-1/2
 			my-36
 			mx-auto
-			relative
 			h-52
 			transform
-			sm:absolute sm:bottom-14 sm:right-16 sm:scale-90
+			sm:w-auto sm:absolute sm:bottom-14 sm:right-16 sm:scale-90
 			md:right-10
-			lg:right-0
+			lg:scale-100 lg:right-24 lg:bottom-28
 		"
 	>
 		<img
@@ -22,8 +21,6 @@
 </template>
 
 <script setup>
-import { onBeforeMount } from 'vue';
-
 const images = [
 	'/src/assets/SlideShowTechLogos/React.png',
 	'/src/assets/SlideShowTechLogos/JS.png',
