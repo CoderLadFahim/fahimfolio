@@ -34,19 +34,20 @@ const props = defineProps({
 		type: String,
 		required: true,
 	},
-	field: {
-		type: String,
-	},
 	regexValidator: {
 		type: Object,
 		required: false,
 	},
 });
 
-/* Debouncing logic */
+const emit = defineEmits(['user-input']);
 
-const removeDisabledClass = () =>
-	document.getElementById(props.idMatcher).classList.remove('disabled');
+/* Debouncing logic */
+const removeDisabledClass = () => {
+	const input = document.getElementById(props.idMatcher);
+	emit('user-input', false);
+	input.classList.remove('disabled');
+};
 
 function debounce(func, timeout = 1000) {
 	let timer;
@@ -64,13 +65,12 @@ function handleUserInput() {
 	/*returning out of the function if the input has no value*/
 	if (!input.value) return;
 
-	/*	const inputClasses = Array.from(input.classList);
-	inputClasses.includes('disabled') ? removeDisabledClass() : '';*/
-
-	!props.regexValidator.test(userInput.value)
-		? input.classList.add('disabled')
-		: '';
+	if (!props.regexValidator.test(userInput.value)) {
+		input.classList.add('disabled');
+		emit('user-input', true);
+	}
 }
+
 const handleKeyUp = debounce(() => handleUserInput());
 </script>
 
@@ -90,7 +90,7 @@ label span {
 
 input {
 	color: #51c9bf;
-	@apply w-full h-full bg-transparent  pt-7 transition duration-300;
+	@apply w-full h-full bg-transparent  pt-7 transition duration-75;
 }
 
 label::after {
