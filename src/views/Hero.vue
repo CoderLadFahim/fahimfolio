@@ -2,10 +2,15 @@
 	<section class="Hero sm:relative">
 		<Slideshow />
 
-		<div id="content" class="px-6 space-y-5 sm:px-11 mt-44">
+		<div id="content" class="px-6 space-y-5 sm:px-11 mt-44 lg:space-y-8">
 			<h1
 				id="author-title"
-				class="source-code-pro-bold text-4xl text-gray-600 sm:text-5xl"
+				class="
+					source-code-pro-bold
+					text-4xl text-gray-600
+					sm:text-5xl
+					lg:text-7xl
+				"
 			>
 				<span id="first-name" class="source-code-pro-black">Fahim</span>
 				al Emroz
@@ -66,6 +71,6 @@ const cvBtnClickHandler = () => {
 }
 
 .btn-base-styles {
-	@apply py-2 px-5 rounded-xl shadow border;
+	@apply py-2 px-5 rounded-xl shadow border lg:text-2xl lg:px-7 lg:py-3 lg:rounded-2xl;
 }
 </style>
