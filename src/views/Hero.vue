@@ -22,21 +22,13 @@
 				<button
 					id="cv-download-btn"
 					@click="cvBtnClickHandler"
-					class="
-						btn-base-styles
-						pointer
-						source-code-pro-bold
-						transition
-						ease-out
-						transform
-						hover:scale-110
-					"
+					class="btn-base-styles pointer source-code-pro-bold"
 				>
 					Download CV
 				</button>
 				<button
 					id="contact-btn"
-					class="btn-base-styles pointer source-code-pro-bold"
+					class="btn-base-styles pointer source-code-pro-bold border"
 				>
 					Contact me
 				</button>
@@ -71,6 +63,6 @@ const cvBtnClickHandler = () => {
 }
 
 .btn-base-styles {
-	@apply py-2 px-5 rounded-xl shadow border lg:text-2xl lg:px-7 lg:py-3 lg:rounded-2xl;
+	@apply py-2 px-5 rounded-xl shadow transform transition ease-out hover:scale-105 lg:text-2xl lg:px-7 lg:py-3 lg:rounded-2xl;
 }
 </style>
