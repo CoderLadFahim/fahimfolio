@@ -1,8 +1,18 @@
 <template>
-	<section class="Hero sm:relative">
+	<section class="Hero sm:relative xl:flex xl:items-center xl:justify-evenly">
 		<Slideshow />
 
-		<div id="content" class="px-6 space-y-5 sm:px-11 mt-44 lg:space-y-8">
+		<div
+			id="content"
+			class="
+				px-6
+				space-y-5
+				sm:px-11
+				mt-44
+				lg:space-y-8
+				xl:w-3/5 xl:order-first xl:m-0
+			"
+		>
 			<h1
 				id="author-title"
 				class="
