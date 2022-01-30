@@ -1,5 +1,5 @@
 <template>
-	<section class="Hero sm:relative xl:flex xl:items-center xl:justify-evenly">
+	<section class="Hero sm:relative xl:flex xl:items-center xl:justify-between">
 		<Slideshow />
 
 		<div
@@ -10,7 +10,7 @@
 				sm:px-11
 				mt-44
 				lg:space-y-8
-				xl:w-3/5 xl:order-first xl:m-0 xl:ml-24
+				xl:w-3/5 xl:order-first xl:m-0 xl:ml-36 xl:px-0
 			"
 		>
 			<h1
