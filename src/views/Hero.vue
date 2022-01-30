@@ -10,7 +10,7 @@
 				sm:px-11
 				mt-44
 				lg:space-y-8
-				xl:w-3/5 xl:order-first xl:m-0
+				xl:w-3/5 xl:order-first xl:m-0 xl:ml-24
 			"
 		>
 			<h1
