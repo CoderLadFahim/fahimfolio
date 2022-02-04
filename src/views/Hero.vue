@@ -29,19 +29,20 @@
 			<Typewriter />
 
 			<div id="action-calls" class="space-x-6">
-				<button
+				<a
 					id="cv-download-btn"
-					@click="cvBtnClickHandler"
+					href="https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download"
 					class="btn-base-styles pointer source-code-pro-bold"
 				>
-					Download CV
-				</button>
-				<button
+					Download CV</a
+				>
+
+				<a
 					id="contact-btn"
 					class="btn-base-styles pointer source-code-pro-bold border"
+					href="#contact-section"
+					>Contact me</a
 				>
-					Contact me
-				</button>
 			</div>
 		</div>
 	</section>
@@ -73,6 +74,6 @@ const cvBtnClickHandler = () => {
 }
 
 .btn-base-styles {
-	@apply py-2 px-5 rounded-xl shadow transform transition ease-out hover:scale-105 lg:text-2xl lg:px-7 lg:py-3 lg:rounded-2xl;
+	@apply inline-block py-2 px-5 rounded-xl shadow transform transition ease-out hover:scale-105 lg:text-2xl lg:px-7 lg:py-3 lg:rounded-2xl;
 }
 </style>
