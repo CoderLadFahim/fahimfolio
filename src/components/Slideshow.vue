@@ -24,7 +24,6 @@
 <script setup>
 const images = [
 	'/src/assets/SlideShowTechLogos/React.png',
-	'/src/assets/SlideShowTechLogos/Figma.png',
 	'/src/assets/SlideShowTechLogos/Vue.png',
 	'/src/assets/SlideShowTechLogos/Tailwind.png',
 ];
