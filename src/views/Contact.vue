@@ -23,8 +23,6 @@
 				labelText="Your name"
 				idMatcher="name"
 				field="VISITOR_NAME"
-				@user-input="handleUserInput"
-				:regexValidator="regices.name"
 			/>
 
 			<app-input
@@ -38,8 +36,8 @@
 				labelText="Email"
 				idMatcher="email"
 				field="EMAIL"
-				@user-input="handleUserInput"
-				:regexValidator="regices.email"
+				:regex="emailValidationRegex"
+				@regex-mismatch="handleRegexMismatch"
 			/>
 
 			<textarea
@@ -71,7 +69,7 @@
 			<button
 				type="submit"
 				class="submit-btn fira-code-bold pointer"
-				:class="{ disabled: userInputIsInvalid }"
+				:class="{ disabled: !invalidValuesExists }"
 			>
 				Get In Touch!
 			</button>
@@ -91,21 +89,13 @@ export default {
 		'app-input': Input,
 	},
 	setup() {
-		const regices = {
-			name: /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/,
-			email: /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/,
-		};
-		const userInputIsInvalid = ref(true);
+		const emailValidationRegex = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
+		const invalidValuesExists = ref(false); // this ref adds a disabled class to the form submit btn
 
-		const handleUserInput = (eventData) => {
-			userInputIsInvalid.value = eventData;
-		};
+		const handleRegexMismatch = (userInputIsValid) =>
+			(invalidValuesExists.value = userInputIsValid);
 
-		return {
-			regices,
-			handleUserInput,
-			userInputIsInvalid,
-		};
+		return { emailValidationRegex, handleRegexMismatch, invalidValuesExists };
 	},
 };
 </script>
@@ -125,6 +115,6 @@ form textarea:focus {
 }
 
 .disabled {
-	@apply bg-gray-800 opacity-50 pointer-events-none;
+	@apply bg-gray-400 pointer-events-none;
 }
 </style>

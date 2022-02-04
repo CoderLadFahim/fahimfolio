@@ -3,11 +3,9 @@
 		<input
 			class="fira-code-bold outline-none text"
 			required
-			v-model="userInput"
 			:id="idMatcher"
 			:name="idMatcher"
-			@keydown="removeDisabledClass"
-			@keyup="(e) => regexValidator && handleKeyUp()"
+			@change="handleKeyUp"
 		/>
 
 		<label
@@ -22,8 +20,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-const userInput = ref('');
+import { ref, defineEmits, watch } from 'vue';
 
 const props = defineProps({
 	labelText: {
@@ -38,40 +35,21 @@ const props = defineProps({
 		type: Object,
 		required: false,
 	},
+	regex: {
+		type: Object,
+	},
 });
 
-const emit = defineEmits(['user-input']);
+const { regex: regexValidator } = props;
+const emit = defineEmits(['regex-mismatch']);
 
-/* Debouncing logic */
-const removeDisabledClass = () => {
-	const input = document.getElementById(props.idMatcher);
-	emit('user-input', false);
-	input.classList.remove('disabled');
+const handleKeyUp = ({ target: { value: userInput } }) => {
+	// exiting then function if regex prop is not passed
+	if (!regexValidator) return;
+
+	/*!regexValidator.test(userInput) ? emit('regex-mismatch', userInput) : '';*/
+	emit('regex-mismatch', regexValidator.test(userInput));
 };
-
-function debounce(func, timeout = 1000) {
-	let timer;
-	return (...args) => {
-		clearTimeout(timer);
-		timer = setTimeout(() => {
-			func.apply(this, args);
-		}, timeout);
-	};
-}
-
-function handleUserInput() {
-	const input = document.getElementById(props.idMatcher);
-
-	/*returning out of the function if the input has no value*/
-	if (!input.value) return;
-
-	if (!props.regexValidator.test(userInput.value)) {
-		input.classList.add('disabled');
-		emit('user-input', true);
-	}
-}
-
-const handleKeyUp = debounce(() => handleUserInput());
 </script>
 
 <style scoped>
