@@ -23,7 +23,7 @@
 				"
 			>
 				<span id="first-name" class="source-code-pro-black">Fahim</span>
-				al Emroz
+				al Emroz | CoderLadFahim
 			</h1>
 
 			<Typewriter />
