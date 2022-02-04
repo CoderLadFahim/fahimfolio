@@ -3,10 +3,9 @@
 		<input
 			class="fira-code-bold outline-none text"
 			required
-			v-model="userInput"
 			:id="idMatcher"
 			:name="idMatcher"
-			@change="userInputChangeEmitter"
+			@change="handleKeyUp"
 		/>
 
 		<label
@@ -21,7 +20,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, defineEmits, watch } from 'vue';
 
 const props = defineProps({
 	labelText: {
@@ -35,14 +34,21 @@ const props = defineProps({
 	field: {
 		type: String,
 	},
+	regex: {
+		type: Object,
+	},
 });
 
-const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
+const { regex: regexValidator } = props;
+const emit = defineEmits(['regex-mismatch']);
 
-const userInput = ref('');
-const emit = defineEmits(['user-input-change']);
-const userInputChangeEmitter = () =>
-	emit('user-input-change', { type: props.field, userInput });
+const handleKeyUp = ({ target: { value: userInput } }) => {
+	// exiting then function if regex prop is not passed
+	if (!regexValidator) return;
+
+	/*!regexValidator.test(userInput) ? emit('regex-mismatch', userInput) : '';*/
+	emit('regex-mismatch', regexValidator.test(userInput));
+};
 </script>
 
 <style scoped>

@@ -7,6 +7,7 @@
 
 		<form
 			action="https://formsubmit.co/fahimalemroz@gmail.com"
+			name="contactForm"
 			method="post"
 			class="
 				mt-7
@@ -22,19 +23,18 @@
 				labelText="Your name"
 				idMatcher="name"
 				field="VISITOR_NAME"
-				@user-input-change="userInputChangeHandler"
 			/>
 			<app-input
 				labelText="Your business name"
 				idMatcher="business"
 				field="BUSINESS_NAME"
-				@user-input-change="userInputChangeHandler"
 			/>
 			<app-input
 				labelText="Email"
 				idMatcher="email"
 				field="EMAIL"
-				@user-input-change="userInputChangeHandler"
+				:regex="emailValidationRegex"
+				@regex-mismatch="handleRegexMismatch"
 			/>
 
 			<textarea
@@ -49,6 +49,7 @@
 					md:h-80 md:h-96
 				"
 				name="visitor-message"
+				required
 				cols="25"
 				rows="9"
 				placeholder="Your message here"
@@ -62,12 +63,13 @@
 
 			<input type="hidden" name="_captcha" value="false" />
 
-			<input
+			<button
 				type="submit"
-				@click="(e) => e.preventDefault()"
-				value="Get In Touch!"
 				class="submit-btn fira-code-bold pointer"
-			/>
+				:class="{ disabled: !invalidValuesExists }"
+			>
+				Get In Touch!
+			</button>
 		</form>
 	</section>
 </template>
@@ -84,15 +86,13 @@ export default {
 		'app-input': Input,
 	},
 	setup() {
-		const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-		const formDataBits = [];
+		const emailValidationRegex = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
+		const invalidValuesExists = ref(false); // this ref adds a disabled class to the form submit btn
 
-		const userInputChangeHandler = (data) => formDataBits.push(data);
+		const handleRegexMismatch = (userInputIsValid) =>
+			(invalidValuesExists.value = userInputIsValid);
 
-		return {
-			emailChecker,
-			userInputChangeHandler,
-		};
+		return { emailValidationRegex, handleRegexMismatch, invalidValuesExists };
 	},
 };
 </script>
@@ -109,5 +109,9 @@ form textarea {
 
 form textarea:focus {
 	@apply outline-none border border-purple-400;
+}
+
+.disabled {
+	@apply bg-gray-400 pointer-events-none;
 }
 </style>
