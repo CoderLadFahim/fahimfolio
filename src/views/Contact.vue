@@ -23,19 +23,18 @@
 				labelText="Your name"
 				idMatcher="name"
 				field="VISITOR_NAME"
-				@user-input-change="userInputChangeHandler"
 			/>
 			<app-input
 				labelText="Your business name"
 				idMatcher="business"
 				field="BUSINESS_NAME"
-				@user-input-change="userInputChangeHandler"
 			/>
 			<app-input
 				labelText="Email"
 				idMatcher="email"
 				field="EMAIL"
-				@user-input-change="userInputChangeHandler"
+				:regex="emailValidationRegex"
+				@regex-mismatch="handleRegexMismatch"
 			/>
 
 			<textarea
@@ -66,9 +65,8 @@
 
 			<button
 				type="submit"
-				@click="formSubmitHandler"
 				class="submit-btn fira-code-bold pointer"
-				:class="{ disabled: !emailValid }"
+				:class="{ disabled: !invalidValuesExists }"
 			>
 				Get In Touch!
 			</button>
@@ -88,32 +86,13 @@ export default {
 		'app-input': Input,
 	},
 	setup() {
-		const formDataBits = reactive([]);
-		let emailValid = ref(false);
+		const emailValidationRegex = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
+		const invalidValuesExists = ref(false); // this ref adds a disabled class to the form submit btn
 
-		const userInputChangeHandler = (data) => formDataBits.push(data);
+		const handleRegexMismatch = (userInputIsValid) =>
+			(invalidValuesExists.value = userInputIsValid);
 
-		const formSubmitHandler = (e) => {
-			e.preventDefault();
-
-			!emailValid.value
-				? alert('Invalid email')
-				: document.contactForm.submit();
-		};
-
-		watch(formDataBits, () => {
-			if (formDataBits.length !== 3) return;
-			const emailChecker = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-			const emailInput = formDataBits[2].userInput;
-
-			emailValid.value = emailChecker.test(emailInput);
-		});
-
-		return {
-			emailValid,
-			userInputChangeHandler,
-			formSubmitHandler,
-		};
+		return { emailValidationRegex, handleRegexMismatch, invalidValuesExists };
 	},
 };
 </script>
@@ -133,6 +112,6 @@ form textarea:focus {
 }
 
 .disabled {
-	@apply bg-gray-400;
+	@apply bg-gray-400 pointer-events-none;
 }
 </style>
