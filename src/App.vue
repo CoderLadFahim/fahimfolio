@@ -21,7 +21,7 @@ export default {
 
 <style>
 body {
-	@apply bg-gray-100 ;
+	@apply bg-gray-100;
 	cursor: url('./assets/cursor.svg'), auto;
 }
 body section {
