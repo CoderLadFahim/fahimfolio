@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import SectionTitle from '../components/SectionTitle';
+import SectionTitle from '../components/SectionTitle.vue';
 
 export default {
 	name: 'SkillsSection',
