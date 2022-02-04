@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import { ref, defineEmits, watch } from 'vue';
+import { ref } from 'vue';
 
 const props = defineProps({
 	labelText: {
