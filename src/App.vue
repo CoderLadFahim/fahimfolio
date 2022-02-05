@@ -1,5 +1,5 @@
 <template>
-	<hero-section />
+	<!-- <hero-section /> -->
 	<skills-section />
 	<contact-section />
 	<nav-bar />
