@@ -1,6 +1,6 @@
 <template>
 	<!-- <hero-section /> -->
-	<skills-section />
+	<!-- <skills-section /> -->
 	<contact-section />
 	<nav-bar />
 </template>
