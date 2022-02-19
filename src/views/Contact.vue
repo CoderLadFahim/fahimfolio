@@ -23,6 +23,7 @@
 				labelText="Your name"
 				idMatcher="name"
 				field="VISITOR_NAME"
+				:regex="nameRegex"
 			/>
 
 			<app-input
@@ -36,7 +37,7 @@
 				labelText="Email"
 				idMatcher="email"
 				field="EMAIL"
-				:regex="emailValidationRegex"
+				:regex="emailRegex"
 			/>
 
 			<textarea
@@ -65,7 +66,12 @@
 
 			<input type="hidden" name="_captcha" value="false" />
 
-			<button type="submit" class="submit-btn fira-code-bold pointer">
+			<button
+				type="submit"
+				class="submit-btn fira-code-bold pointer"
+				:disabled="!allInputsValid"
+				:class="{ disabled: !allInputsValid }"
+			>
 				Get In Touch!
 			</button>
 		</form>
@@ -83,7 +89,18 @@ export default {
 		'section-title': SectionTitle,
 		'app-input': Input,
 	},
-	setup() {},
+	setup() {
+		const nameRegex = /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/;
+		const emailRegex =
+			/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+		const allInputsValid = ref(false);
+
+		return {
+			nameRegex,
+			emailRegex,
+			allInputsValid,
+		};
+	},
 };
 </script>
 
