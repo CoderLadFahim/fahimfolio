@@ -37,7 +37,6 @@
 				idMatcher="email"
 				field="EMAIL"
 				:regex="emailValidationRegex"
-				@regex-mismatch="handleRegexMismatch"
 			/>
 
 			<textarea
@@ -66,11 +65,7 @@
 
 			<input type="hidden" name="_captcha" value="false" />
 
-			<button
-				type="submit"
-				class="submit-btn fira-code-bold pointer"
-				:class="{ disabled: !invalidValuesExists }"
-			>
+			<button type="submit" class="submit-btn fira-code-bold pointer">
 				Get In Touch!
 			</button>
 		</form>
@@ -88,15 +83,7 @@ export default {
 		'section-title': SectionTitle,
 		'app-input': Input,
 	},
-	setup() {
-		const emailValidationRegex = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-		const invalidValuesExists = ref(false); // this ref adds a disabled class to the form submit btn
-
-		const handleRegexMismatch = (userInputIsValid) =>
-			(invalidValuesExists.value = userInputIsValid);
-
-		return { emailValidationRegex, handleRegexMismatch, invalidValuesExists };
-	},
+	setup() {},
 };
 </script>
 

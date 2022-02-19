@@ -5,7 +5,6 @@
 			required
 			:id="idMatcher"
 			:name="idMatcher"
-			@change="handleKeyUp"
 		/>
 
 		<label
@@ -37,17 +36,6 @@ const props = defineProps({
 		type: Object,
 	},
 });
-
-const { regex: regexValidator } = props;
-const emit = defineEmits(['regex-mismatch']);
-
-const handleKeyUp = ({ target: { value: userInput } }) => {
-	// exiting then function if regex prop is not passed
-	if (!regexValidator) return;
-
-	/*!regexValidator.test(userInput) ? emit('regex-mismatch', userInput) : '';*/
-	emit('regex-mismatch', regexValidator.test(userInput));
-};
 </script>
 
 <style scoped>
