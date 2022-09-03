@@ -28,7 +28,7 @@ body {
 	cursor: url('./assets/cursor.svg'), auto;
 }
 body section {
-	@apply h-screen border border-4 border-blue-600;
+	@apply h-screen border-4 border-blue-600;
 }
 
 .pointer {
