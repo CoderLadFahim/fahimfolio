@@ -22,22 +22,24 @@
 			<app-input
 				labelText="Your name"
 				idMatcher="name"
+				v-model="name"
 				field="VISITOR_NAME"
-				:regex="nameRegex"
 			/>
 
 			<app-input
-				labelText="Your business name"
+				labelText="Name of your company"
 				idMatcher="business"
 				:isRequired="true"
 				field="BUSINESS_NAME"
-			/>
+				v-model="companyName"
+			/> 
 
 			<app-input
 				labelText="Email"
 				idMatcher="email"
 				field="EMAIL"
 				:regex="emailRegex"
+				v-model="email"
 			/>
 
 			<textarea
@@ -81,7 +83,7 @@
 <script>
 import SectionTitle from '../components/SectionTitle.vue';
 import Input from '../components/Input.vue';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 export default {
 	name: 'Contact',
@@ -90,15 +92,19 @@ export default {
 		'app-input': Input,
 	},
 	setup() {
-		const nameRegex = /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/;
 		const emailRegex =
 			/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-		const allInputsValid = ref(false);
+
+		const name = ref('');
+		const companyName = ref('');
+		const email = ref('');
+		
+		const allInputsValid = computed(() => name.value && companyName.value && emailRegex.test(email.value));
 
 		return {
-			nameRegex,
 			emailRegex,
 			allInputsValid,
+			name, companyName, email
 		};
 	},
 };

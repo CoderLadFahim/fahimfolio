@@ -5,6 +5,8 @@
 			required
 			:id="idMatcher"
 			:name="idMatcher"
+			:value="modelValue"
+			@input="$emit('update:modelValue', $event.target.value)"
 		/>
 
 		<label
@@ -20,6 +22,7 @@
 
 <script setup>
 const props = defineProps({
+	modelValue: { type: String },
 	labelText: {
 		type: String,
 		required: true,
@@ -27,13 +30,6 @@ const props = defineProps({
 	idMatcher: {
 		type: String,
 		required: true,
-	},
-	regexValidator: {
-		type: Object,
-		required: false,
-	},
-	regex: {
-		type: Object,
 	},
 });
 
