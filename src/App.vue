@@ -1,6 +1,6 @@
 <template>
-	<!-- <hero-section /> -->
-	<!-- <skills-section /> -->
+	<hero-section />
+	<skills-section />
 	<contact-section />
 	<nav-bar />
 </template>
@@ -28,7 +28,7 @@ body {
 	cursor: url('./assets/cursor.svg'), auto;
 }
 body section {
-	@apply h-screen border-4 border-blue-600;
+	@apply h-screen;
 }
 
 .pointer {

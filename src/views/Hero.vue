@@ -1,26 +1,14 @@
 <template>
 	<section class="Hero sm:relative xl:flex xl:items-center xl:justify-between">
-		<Slideshow />
+		<!-- <Slideshow /> -->
 
 		<div
 			id="content"
-			class="
-				px-6
-				space-y-5
-				sm:px-11
-				mt-44
-				lg:space-y-8
-				xl:w-3/5 xl:order-first xl:m-0 xl:ml-36 xl:px-0
-			"
+			class="px-6 space-y-5 sm:px-11 lg:space-y-8 sm:mt-56 xl:w-3/5 xl:order-first xl:m-0 xl:ml-36 xl:px-0"
 		>
 			<h1
 				id="author-title"
-				class="
-					source-code-pro-bold
-					text-4xl text-gray-600
-					sm:text-5xl
-					lg:text-7xl
-				"
+				class="source-code-pro-bold text-4xl text-gray-600 sm:text-5xl lg:text-7xl"
 			>
 				<span id="first-name" class="source-code-pro-black">Fahim</span>
 				al Emroz
