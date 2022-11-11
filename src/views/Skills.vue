@@ -1,5 +1,5 @@
 <template>
-	<section id="skills-section">
+	<section id="skills-section" class="site-section">
 		<section-title titleText="My.Skills" />
 
 		<div class="skill-cols">

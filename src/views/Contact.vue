@@ -1,7 +1,7 @@
 <template>
 	<section
 		id="contact-section"
-		class="w-11/12 mx-auto flex flex-col items-center"
+		class="w-11/12 mx-auto flex flex-col items-center site-section"
 	>
 		<section-title titleText="Contact.Me" />
 

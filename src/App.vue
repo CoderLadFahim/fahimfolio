@@ -27,8 +27,8 @@ body {
 	@apply bg-gray-100;
 	cursor: url('./assets/cursor.svg'), auto;
 }
-body section {
-	@apply h-screen;
+.site-section {
+	@apply h-screen border border-red-400;
 }
 
 .pointer {

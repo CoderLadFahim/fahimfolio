@@ -1,5 +1,5 @@
 <template>
-	<section class="Hero sm:relative xl:flex xl:items-center xl:justify-between">
+	<section class="Hero site-section sm:relative xl:flex xl:items-center xl:justify-between">
 		<!-- <Slideshow /> -->
 
 		<div
