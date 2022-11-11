@@ -8,7 +8,7 @@
 		>
 			<h1
 				id="author-title"
-				class="source-code-pro-bold text-4xl text-gray-600 sm:text-5xl lg:text-7xl"
+				class="source-code-pro-bold text-4xl text-gray-600 sm:text-5xl lg:text-7xl xl:text-5xl"
 			>
 				<span id="first-name" class="source-code-pro-black">Fahim</span>
 				al Emroz
@@ -38,13 +38,13 @@
 
 <script setup>
 import Typewriter from '../components/Typewriter.vue';
-import Slideshow from '../components/Slideshow.vue';
-
-const cvBtnClickHandler = () => {
-	const downloadLink =
-		'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download';
-	window.open(downloadLink, '_blank');
-};
+/* import Slideshow from '../components/Slideshow.vue'; */
+/*  */
+/* const cvBtnClickHandler = () => { */
+/* const downloadLink = */
+/* 'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download'; */
+/* window.open(downloadLink, '_blank'); */
+/* }; */
 </script>
 
 <style>
@@ -62,6 +62,6 @@ const cvBtnClickHandler = () => {
 }
 
 .btn-base-styles {
-	@apply inline-block py-2 px-5 rounded-xl shadow transform transition ease-out hover:scale-105 lg:text-2xl lg:px-7 lg:py-3 lg:rounded-2xl;
+	@apply inline-block py-2 px-5 rounded-md shadow transform transition ease-out hover:scale-105 lg:text-2xl lg:px-7 lg:py-3 lg:rounded-2xl;
 }
 </style>
