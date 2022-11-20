@@ -2,7 +2,7 @@
 	<section id="skills-section" class="site-section">
 		<section-title titleText="My.Skills" />
 		<div
-			class="flex items-start mt-5 sm:mt-20 sm:justify-evenly xl:justify-center xl:gap-20 xl:mt-10"
+			class="flex items-start mt-5 sm:mt-20 sm:justify-evenly xl:justify-center xl:gap-20 xl:mt-10 3xl:mt-24 3xl:gap-24 3xl:items-center"
 		>
 			<div class="skill-col source-code-pro secondary-col">
 				<div class="col-header">
@@ -107,6 +107,17 @@ export default {
 	setup() {
 		const frameworks = [
 			{
+				skillName: 'VueJS',
+				skillImgPath: '/src/assets/TechLogos/Vue-Logo.png',
+				magnified: true,
+			},
+			{
+				skillName: 'VueX',
+				skillImgPath: '/src/assets/TechLogos/vuex.png',
+				magnified: false,
+				isSeparator: true,
+			},
+			{
 				skillName: 'ReactJS',
 				skillImgPath: '/src/assets/TechLogos/React-Logo.png',
 				magnified: true,
@@ -118,24 +129,13 @@ export default {
 				isSeparator: true,
 			},
 			{
-				skillName: 'Vue',
-				skillImgPath: '/src/assets/TechLogos/Vue-Logo.png',
-				magnified: true,
-			},
-			{
-				skillName: 'VueX',
-				skillImgPath: '/src/assets/TechLogos/vuex.png',
-				magnified: false,
-				isSeparator: true,
-			},
-			{
 				skillName: 'TailwindCSS',
 				skillImgPath: '/src/assets/TechLogos/Tailwind.png',
 				magnified: false,
 			},
 			{
-				skillName: 'GSAP',
-				skillImgPath: '/src/assets/TechLogos/gsap.png',
+				skillName: 'Bootstrap',
+				skillImgPath: '/src/assets/TechLogos/bootstrap.png',
 				magnified: false,
 			},
 		];
@@ -165,8 +165,18 @@ export default {
 
 		const tools = [
 			{
-				skillName: 'Terminal',
-				skillImgPath: '/src/assets/TechLogos/terminal.png',
+				skillName: 'Figma',
+				skillImgPath: '/src/assets/TechLogos/figma.png',
+				magnified: false,
+			},
+			{
+				skillName: 'Linux terminal',
+				skillImgPath: '/src/assets/TechLogos/linux.png',
+				magnified: false,
+			},
+			{
+				skillName: 'Vim',
+				skillImgPath: '/src/assets/TechLogos/vim.png',
 				magnified: false,
 			},
 			{
@@ -179,16 +189,6 @@ export default {
 				skillImgPath: '/src/assets/TechLogos/github.png',
 				magnified: false,
 			},
-			{
-				skillName: 'npm',
-				skillImgPath: '/src/assets/TechLogos/npm.png',
-				magnified: false,
-			},
-			{
-				skillName: 'figma',
-				skillImgPath: '/src/assets/TechLogos/figma.png',
-				magnified: false,
-			},
 		];
 
 		return { frameworks, languages, tools };
@@ -198,7 +198,7 @@ export default {
 
 <style>
 .secondary-col {
-	@apply mt-8;
+	@apply mt-8 xl:mt-12 3xl:mt-0;
 }
 
 .secondary-col:first-child {
@@ -210,7 +210,7 @@ export default {
 }
 
 .skill-col {
-	@apply bg-gray-50 rounded-lg w-5/12 sm:w-1/4 xl:w-1/6 border-2 border-green-300 sm:rounded-lg sm:border-0 overflow-hidden sm:shadow-md xl:rounded-2xl;
+	@apply bg-gray-50 rounded-lg w-5/12 sm:w-1/4 xl:w-1/6 border-2 border-green-300 sm:rounded-lg sm:border-0 overflow-hidden sm:shadow-md xl:rounded-2xl 3xl:shadow-lg;
 }
 
 .col-header {
