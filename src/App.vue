@@ -28,7 +28,7 @@ body {
 	cursor: url('./assets/cursor.svg'), auto;
 }
 .site-section {
-	@apply h-screen border border-red-400;
+	@apply min-h-screen border border-red-400;
 }
 
 .pointer {

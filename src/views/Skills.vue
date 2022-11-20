@@ -1,16 +1,14 @@
 <template>
 	<section id="skills-section" class="site-section">
 		<section-title titleText="My.Skills" />
-		<div class="flex items-start mt-5">
-			<div
-				class="skill-col bg-gray-50 rounded-md w-5/12 border-2 border-green-300 source-code-pro-bold secondary-col"
-			>
-				<div
-					class="col-header bg-green-300 text-white text-center py-2 px-0 text-xs"
-				>
+		<div
+			class="flex items-start mt-5 sm:mt-20 sm:justify-evenly xl:justify-center xl:gap-20 xl:mt-10"
+		>
+			<div class="skill-col source-code-pro secondary-col">
+				<div class="col-header">
 					<span class="col-title">Languages</span>
 				</div>
-				<div class="col-body space-y-6 py-6">
+				<div class="col-body space-y-6 py-6 sm:space-y-10 sm:py-10">
 					<div
 						class="skill space-y-1 flex flex-col justify-center items-center"
 						v-for="skill in languages"
@@ -36,15 +34,9 @@
 				</div>
 			</div>
 
-			<div
-				class="skill-col rounded-md w-5/12 border-2 border-green-300 bg-white source-code-pro-bold z-50"
-			>
-				<div
-					class="col-header bg-green-300 text-white text-center py-2 text-xs"
-				>
-					Frameworks
-				</div>
-				<div class="col-body space-y-6 py-6">
+			<div class="skill-col bg-white source-code-pro-bold z-50">
+				<div class="col-header">Frameworks</div>
+				<div class="col-body space-y-6 py-6 sm:space-y-10 sm:py-10">
 					<div
 						class="skill space-y-1 flex flex-col justify-center items-center"
 						v-for="skill in frameworks"
@@ -70,15 +62,11 @@
 				</div>
 			</div>
 
-			<div
-				class="skill-col bg-gray-50 rounded-md w-5/12 border-2 border-green-300 source-code-pro-bold secondary-col"
-			>
-				<div
-					class="col-header bg-green-300 text-white text-center py-2 px-0 text-xs"
-				>
+			<div class="skill-col source-code-pro secondary-col">
+				<div class="col-header">
 					<span class="col-title">Tools</span>
 				</div>
-				<div class="col-body space-y-6 py-6">
+				<div class="col-body space-y-6 py-6 sm:space-y-10 sm:py-10">
 					<div
 						class="skill space-y-1 flex flex-col justify-center items-center"
 						v-for="skill in tools"
@@ -214,10 +202,18 @@ export default {
 }
 
 .secondary-col:first-child {
-	@apply transform translate-x-4;
+	@apply transform translate-x-4 sm:translate-x-0;
 }
 
 .secondary-col:last-child {
-	@apply transform -translate-x-4;
+	@apply transform -translate-x-4 sm:translate-x-0;
+}
+
+.skill-col {
+	@apply bg-gray-50 rounded-lg w-5/12 sm:w-1/4 xl:w-1/6 border-2 border-green-300 sm:rounded-lg sm:border-0 overflow-hidden sm:shadow-md xl:rounded-2xl;
+}
+
+.col-header {
+	@apply bg-green-300 text-white text-center py-2 px-0 text-xs xl:py-3 xl:text-lg;
 }
 </style>
