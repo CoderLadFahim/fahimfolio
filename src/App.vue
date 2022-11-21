@@ -1,5 +1,6 @@
 <template>
 	<hero-section />
+	<project-section />
 	<skills-section />
 	<contact-section />
 	<nav-bar />
@@ -10,6 +11,7 @@ import Navbar from './components/navbar.vue';
 import Contact from './views/Contact.vue';
 import Hero from './views/Hero.vue';
 import SkillsSection from './views/Skills.vue';
+import ProjectsSection from './views/Projects.vue';
 
 export default {
 	name: 'App',
@@ -18,6 +20,7 @@ export default {
 		'hero-section': Hero,
 		'contact-section': Contact,
 		'skills-section': SkillsSection,
+		'project-section': ProjectsSection,
 	},
 };
 </script>

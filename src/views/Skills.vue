@@ -6,7 +6,7 @@
 		>
 			<div class="skill-col source-code-pro secondary-col">
 				<div class="col-header">
-					<span class="col-title">Languages</span>
+					<p class="col-title">Languages</p>
 				</div>
 				<div class="col-body space-y-6 py-6 sm:space-y-10 sm:py-10">
 					<div
@@ -52,7 +52,7 @@
 								skill.magnified ? 'text-sm' : 'text-xs'
 							} ${
 								skill.isSeparator
-									? 'pb-4 border-b-2 border-gray-200 w-3/4'
+									? 'pb-6 border-b-2 border-gray-200 w-3/5 xl:w-3/6'
 									: ''
 							}`"
 						>
@@ -170,7 +170,7 @@ export default {
 				magnified: false,
 			},
 			{
-				skillName: 'Linux terminal',
+				skillName: 'WSL2',
 				skillImgPath: '/src/assets/TechLogos/linux.png',
 				magnified: false,
 			},
