@@ -12,8 +12,30 @@ const projects = computed((): ProjectInterface[] => store.state.projects);
 <template>
 	<section id="skills-section" class="site-section">
 		<SectionTitle titleText="My.Projects" />
-		<div class="project-display space-y-14 py-14 flex flex-col items-center sm:flex-row sm:flex-wrap sm:justify-center md:space-y-0 md:gap-10 md:justify-start">
+		<div class="project-display">
 			<Project v-for="(project, i) in projects" :project="project" :key="i" />
 		</div>
 	</section>
 </template>
+
+
+<style>
+.project-display {
+	@apply 
+		space-y-14
+		py-14
+		flex
+		flex-col 
+		items-center 
+
+		sm:flex-row 
+		sm:flex-wrap 
+		sm:justify-center 
+		sm:space-y-0 
+		sm:gap-5 
+		sm:gap-y-10 
+
+		md:space-y-0 
+		md:gap-10 
+}
+</style>

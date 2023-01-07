@@ -25,21 +25,31 @@ defineProps<{project: ProjectInterface}>()
 					 </div>
 				</div>
 		  </div>
-		  <div class="project-actions space-y-4 sm:absolute top-0 -right-12">
+		  <div class="project-actions space-y-4 sm:absolute top-0 right-3 top-3 bg-gray-600 rounded-full p-1 self-start">
 				<a
 					 :href="project.link"
 					 target="_blank"
-					 class="block w-9 h-9 bg-purple-300 rounded-full shadow-md font-bold text-white text-center py-2"
+					 class="block w-8 h-8 bg-purple-300 rounded-full shadow-md font-bold text-white text-center py-2 grid place-items-center"
 				>
 					 <font-awesome-icon icon="external-link-alt" />
 				</a>
 				<a
 					 :href="project.sourceCodeLink"
 					 target="_blank"
-					 class="block w-9 h-9 bg-white rounded-full shadow-md font-bold text-blue-300 text-center py-2"
+					 class="block w-8 h-8 bg-white rounded-full shadow-md font-bold text-blue-300 text-center py-2 grid place-items-center"
 				>
 					 <font-awesome-icon icon="code" />
 				</a>
 		  </div>
 	 </div>
 </template>
+
+<style>
+.project-actions {
+	@apply sm:opacity-10 transition;
+}
+
+.project:hover .project-actions {
+	@apply sm:opacity-100;
+}
+</style>
