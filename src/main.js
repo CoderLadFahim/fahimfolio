@@ -10,10 +10,11 @@ import {
 	faProjectDiagram,
 	faPhone,
 	faUserSecret,
+	faExternalLinkAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(faHome, faCode, faProjectDiagram, faPhone, faUserSecret);
+library.add(faHome, faCode, faProjectDiagram, faPhone, faUserSecret, faExternalLinkAlt);
 
 createApp(App)
 	.use(store)
