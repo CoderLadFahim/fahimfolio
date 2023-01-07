@@ -7,36 +7,27 @@ defineProps<{project: ProjectInterface}>()
 <template>
 	 <div class="project flex align-start gap-4 relative">
 		  <div class="w-72 space-y-7">
-				<img class="thumbnail w-full h-52 rounded-xl shadow-md" :src="project.thumbnail" alt="Project Thumbnail" />
+				<img class="thumbnail w-full h-52 rounded shadow-md" :src="project.thumbnail" alt="Project Thumbnail" />
 				<div class="info-bar rounded-md bg-white shadow-md flex align-center justify-between p-3">
 					 <p class= "project-title ubuntu-mono-bold custom-blue">{{ project.title }}</p>
-					 <div
-						  class="dependencies"
-						  v-for="(dependency, i) in project.dependencies"
-						  :key="i"
-					 >
-						  <div class="dependency">
-								<img
-									 class="w-5"
-									 :src="dependency.iconPath"
-									 alt="Project Thumbnail"
-								/>
-						  </div>
+					 <div class="dependencies flex align-center space-x-3">
+						<img v-for="(dependency, i) in project.dependencies" :key="i" class="w-6 h-6" :src="dependency.iconPath"  alt="Project Thumbnail"  />
 					 </div>
 				</div>
 		  </div>
-		  <div class="project-actions space-y-4 sm:absolute top-0 right-3 top-3 bg-gray-600 rounded-full p-1 self-start">
+		  <div class="project-actions space-y-4 sm:absolute right-3 top-3 bg-gray-600 rounded-full p-1 self-start border-2 border-gray-700">
 				<a
-					 :href="project.link"
-					 target="_blank"
-					 class="block w-8 h-8 bg-purple-300 rounded-full shadow-md font-bold text-white text-center py-2 grid place-items-center"
+					:href="project.link"
+					target="_blank"
+					class="bg-purple-300 text-white"
 				>
 					 <font-awesome-icon icon="external-link-alt" />
 				</a>
 				<a
-					 :href="project.sourceCodeLink"
-					 target="_blank"
-					 class="block w-8 h-8 bg-white rounded-full shadow-md font-bold text-blue-300 text-center py-2 grid place-items-center"
+				  	v-if="project.sourceCodeLink"
+					:href="project.sourceCodeLink"
+					target="_blank"
+					class="bg-white text-blue-300"
 				>
 					 <font-awesome-icon icon="code" />
 				</a>
@@ -46,10 +37,14 @@ defineProps<{project: ProjectInterface}>()
 
 <style>
 .project-actions {
-	@apply sm:opacity-10 transition;
+	@apply sm:opacity-5 transition;
 }
 
 .project:hover .project-actions {
 	@apply sm:opacity-100;
+}
+
+.project-actions a {
+	@apply block w-8 h-8 rounded-full shadow-md font-bold text-center py-2 grid place-items-center transform transition scale-90 hover:scale-100
 }
 </style>
