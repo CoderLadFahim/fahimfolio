@@ -13,6 +13,10 @@
 	box-sizing: border-box;
 }
 
+body .custom-blue {
+	color: #06b6d4;
+}
+
 .ubuntu-mono {
 	font-family: 'Ubuntu Mono', Arial, Helvetica, sans-serif;
 	font-weight: 400;

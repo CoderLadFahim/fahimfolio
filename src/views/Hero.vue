@@ -10,7 +10,7 @@
 				id="author-title"
 				class="source-code-pro-bold text-4xl text-gray-600 sm:text-5xl lg:text-7xl xl:text-5xl"
 			>
-				<span id="first-name" class="source-code-pro-black">Fahim</span>
+				<span id="first-name" class="source-code-pro-black custom-blue">Fahim</span>
 				al Emroz
 			</h1>
 
@@ -27,7 +27,7 @@
 
 				<a
 					id="contact-btn"
-					class="btn-base-styles pointer source-code-pro-bold border"
+					class="btn-base-styles pointer source-code-pro-bold border custom-blue"
 					href="#contact-section"
 					>Contact me</a
 				>
@@ -48,13 +48,13 @@ import Typewriter from '../components/Typewriter.vue';
 </script>
 
 <style>
-#first-name {
+/* #first-name {
 	color: #06b6d4;
 }
 
 #contact-btn {
 	color: #06b6d4;
-}
+} */
 
 #cv-download-btn {
 	color: #fff;

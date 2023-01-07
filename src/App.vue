@@ -27,7 +27,7 @@ export default {
 
 <style>
 body {
-	@apply bg-gray-100;
+	@apply bg-gray-100 overflow-x-hidden;
 	cursor: url('./assets/cursor.svg'), auto;
 }
 .site-section {

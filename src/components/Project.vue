@@ -1,9 +1,15 @@
+<script lang="ts" setup>
+import { ProjectInterface } from '../TypescriptReusables/Interfaces';
+
+defineProps<{project: ProjectInterface}>()
+</script>
+
 <template>
-    <div class="project flex align-start gap-4">
+    <div class="project flex align-start gap-4 relative">
         <div class="w-72 space-y-7">
-            <img :src="project.thumbnail" alt="Project Thumbnail" class="thumbnail w-full h-52 rounded-xl shadow-md"/>
+            <img class="thumbnail w-full h-52 rounded-xl shadow-md" :src="project.thumbnail" alt="Project Thumbnail" />
             <div class="info-bar rounded-md bg-white shadow-md flex align-center justify-between p-3">
-                <p class="project-title">{{ project.title }}</p>
+                <p class= "project-title ubuntu-mono-bold custom-blue">{{ project.title }}</p>
                 <div
                     class="dependencies"
                     v-for="(dependency, i) in project.dependencies"
@@ -19,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <div class="project-actions space-y-4">
+        <div class="project-actions space-y-4 sm:absolute top-0 -right-12">
             <a
                 href="project.link"
                 class="block w-9 h-9 bg-purple-300 rounded-full shadow-md font-bold text-white text-center py-2"
@@ -35,13 +41,3 @@
         </div>
     </div>
 </template>
-
-<script lang="ts" setup>
-import { ProjectInterface } from '../TypescriptReusables/Interfaces';
-
-defineProps<{project: ProjectInterface}>()
-</script>
-
-
-
-
