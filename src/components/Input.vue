@@ -33,15 +33,6 @@ const props = defineProps({
 	},
 });
 
-function debounce(func, timeout = 1000) {
-	let timer;
-	return (...args) => {
-		clearTimeout(timer);
-		timer = setTimeout(() => {
-			func.apply(this, args);
-		}, timeout);
-	};
-}
 </script>
 
 <style scoped>
@@ -83,3 +74,4 @@ input:valid + label::after {
 	@apply text-red-400;
 }
 </style>
+

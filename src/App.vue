@@ -1,28 +1,19 @@
 <template>
-	<hero-section />
-	<project-section />
-	<skills-section />
-	<contact-section />
-	<nav-bar />
+	<HeroSection />
+	<ProjectsSection />
+	<SkillsSection />
+	<ContactSection />
+	<NavBar />
+	<!-- <Cursor /> -->
 </template>
 
-<script>
-import Navbar from './components/navbar.vue';
-import Contact from './views/Contact.vue';
-import Hero from './views/Hero.vue';
+<script lang="ts" setup>
+import NavBar from './components/navbar.vue';
+// import Cursor from './cursor.vue';
+import ContactSection from './views/Contact.vue';
+import HeroSection from './views/Hero.vue';
 import SkillsSection from './views/Skills.vue';
 import ProjectsSection from './views/Projects.vue';
-
-export default {
-	name: 'App',
-	components: {
-		'nav-bar': Navbar,
-		'hero-section': Hero,
-		'contact-section': Contact,
-		'skills-section': SkillsSection,
-		'project-section': ProjectsSection,
-	},
-};
 </script>
 
 <style>

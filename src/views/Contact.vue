@@ -1,9 +1,22 @@
+<script lang="ts" setup>
+import SectionTitle from '../components/SectionTitle.vue';
+import Input from '../components/Input.vue';
+import { ref, computed } from 'vue';
+const emailRegex: RegExp = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+const name = ref<string>('');
+const companyName = ref<string>('');
+const email = ref<string>('');
+
+const allInputsValid = computed(() => name.value && companyName.value && emailRegex.test(email.value));
+</script>
+
 <template>
 	<section
 		id="contact-section"
 		class="w-11/12 mx-auto flex flex-col items-center site-section"
 	>
-		<section-title titleText="Contact.Me" />
+		<SectionTitle titleText="Contact.Me" />
 
 		<form
 			action="https://formsubmit.co/fahimalemroz@gmail.com"
@@ -11,14 +24,14 @@
 			method="post"
 			class="mt-7 flex flex-col space-y-8 items-center sm:mt-20 sm:w-3/5 sm:space-y-16 lg:w-1/2 lg:mt-36 xl:w-1/3 xl:mt-12"
 		>
-			<app-input
+			<Input
 				labelText="Your name"
 				idMatcher="name"
 				v-model="name"
 				field="VISITOR_NAME"
 			/>
 
-			<app-input
+			<Input
 				labelText="Name of your company"
 				idMatcher="business"
 				:isRequired="true"
@@ -26,7 +39,7 @@
 				v-model="companyName"
 			/>
 
-			<app-input
+			<Input
 				labelText="Email"
 				idMatcher="email"
 				field="EMAIL"
@@ -62,40 +75,6 @@
 		</form>
 	</section>
 </template>
-
-<script lang="ts">
-import SectionTitle from '../components/SectionTitle.vue';
-import Input from '../components/Input.vue';
-import { ref, computed } from 'vue';
-
-export default {
-	name: 'Contact',
-	components: {
-		'section-title': SectionTitle,
-		'app-input': Input,
-	},
-	setup() {
-		const emailRegex: RegExp =
-			/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-		const name = ref('');
-		const companyName = ref('');
-		const email = ref('');
-
-		const allInputsValid = computed(
-			() => name.value && companyName.value && emailRegex.test(email.value)
-		);
-
-		return {
-			emailRegex,
-			allInputsValid,
-			name,
-			companyName,
-			email,
-		};
-	},
-};
-</script>
 
 <style scoped>
 .submit-btn {

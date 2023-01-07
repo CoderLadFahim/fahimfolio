@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import Typewriter from '../components/Typewriter.vue';
+/* import Slideshow from '../components/Slideshow.vue'; */
+/*  */
+/* const cvBtnClickHandler = () => { */
+/* const downloadLink = */
+/* 'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download'; */
+/* window.open(downloadLink, '_blank'); */
+/* }; */
+</script>
+
 <template>
 	<section class="Hero site-section sm:relative xl:flex xl:items-center xl:justify-between">
 		<!-- <Slideshow /> -->
@@ -35,17 +46,6 @@
 		</div>
 	</section>
 </template>
-
-<script setup>
-import Typewriter from '../components/Typewriter.vue';
-/* import Slideshow from '../components/Slideshow.vue'; */
-/*  */
-/* const cvBtnClickHandler = () => { */
-/* const downloadLink = */
-/* 'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download'; */
-/* window.open(downloadLink, '_blank'); */
-/* }; */
-</script>
 
 <style>
 /* #first-name {

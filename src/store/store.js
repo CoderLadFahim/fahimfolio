@@ -53,6 +53,9 @@ const store = createStore({
 						
 					]
 				}
+			],
+			skills: [
+
 			]
 		};
 	},
