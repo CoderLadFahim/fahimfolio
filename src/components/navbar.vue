@@ -26,7 +26,7 @@
 	@apply 
 		border flex shadow justify-between w-11/12 
 		px-4 py-1 rounded-xl fixed left-1/2 bottom-3 
-		transform -translate-x-1/2 bg-white
+		transform -translate-x-1/2 bg-white z-50
 
 		sm:bottom-auto 
 		sm:top-3 
