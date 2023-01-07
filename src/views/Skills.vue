@@ -1,90 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import SectionTitle from '../components/SectionTitle.vue';
-const frameworks = [
-	{
-		skillName: 'VueJS',
-		skillImgPath: '/src/assets/TechLogos/Vue-Logo.png',
-		magnified: true,
-	},
-	{
-		skillName: 'VueX',
-		skillImgPath: '/src/assets/TechLogos/vuex.png',
-		magnified: false,
-		isSeparator: true,
-	},
-	{
-		skillName: 'ReactJS',
-		skillImgPath: '/src/assets/TechLogos/React-Logo.png',
-		magnified: true,
-	},
-	{
-		skillName: 'ReduxJS',
-		skillImgPath: '/src/assets/TechLogos/redux.png',
-		magnified: false,
-		isSeparator: true,
-	},
-	{
-		skillName: 'TailwindCSS',
-		skillImgPath: '/src/assets/TechLogos/Tailwind.png',
-		magnified: false,
-	},
-	{
-		skillName: 'Bootstrap',
-		skillImgPath: '/src/assets/TechLogos/bootstrap.png',
-		magnified: false,
-	},
-];
+import { SkillInterface } from '../TypescriptReusables/Interfaces.interface';
+import { useStore } from 'vuex';
+import { computed } from 'vue';
 
-const languages = [
-	{
-		skillName: 'HTML+CSS',
-		skillImgPath: '/src/assets/TechLogos/css.png',
-		magnified: false,
-	},
-	{
-		skillName: 'Sass',
-		skillImgPath: '/src/assets/TechLogos/sass.png',
-		magnified: false,
-	},
-	{
-		skillName: 'JavaScript',
-		skillImgPath: '/src/assets/TechLogos/JS.png',
-		magnified: false,
-	},
-	{
-		skillName: 'TypeScript',
-		skillImgPath: '/src/assets/TechLogos/TS.png',
-		magnified: false,
-	},
-];
-
-const tools = [
-	{
-		skillName: 'Figma',
-		skillImgPath: '/src/assets/TechLogos/figma.png',
-		magnified: false,
-	},
-	{
-		skillName: 'WSL2',
-		skillImgPath: '/src/assets/TechLogos/linux.png',
-		magnified: false,
-	},
-	{
-		skillName: 'Vim',
-		skillImgPath: '/src/assets/TechLogos/vim.png',
-		magnified: false,
-	},
-	{
-		skillName: 'Git',
-		skillImgPath: '/src/assets/TechLogos/git.png',
-		magnified: false,
-	},
-	{
-		skillName: 'GitHub',
-		skillImgPath: '/src/assets/TechLogos/github.png',
-		magnified: false,
-	},
-];
+const store = useStore();
+const languages = computed((): SkillInterface[] => store.state.skills.languages);
+const frameworks = computed((): SkillInterface[] => store.state.skills.frameworks);
+const tools = computed((): SkillInterface[] => store.state.skills.tools);
 </script>
 
 <template>
@@ -101,11 +24,11 @@ const tools = [
 					<div
 						class="skill space-y-1 flex flex-col justify-center items-center"
 						v-for="skill in languages"
-						:key="skill.name"
+						:key="skill.skillName"
 					>
 						<img
 							:src="skill.skillImgPath"
-							:alt="skill.name"
+							:alt="skill.skillName"
 							:class="`${skill.magnified ? 'w-20' : 'w-12'}`"
 						/>
 						<p
@@ -129,11 +52,11 @@ const tools = [
 					<div
 						class="skill space-y-1 flex flex-col justify-center items-center"
 						v-for="skill in frameworks"
-						:key="skill.name"
+						:key="skill.skillName"
 					>
 						<img
 							:src="skill.skillImgPath"
-							:alt="skill.name"
+							:alt="skill.skillName"
 							:class="`${skill.magnified ? 'w-20' : 'w-12'}`"
 						/>
 						<p
@@ -159,11 +82,11 @@ const tools = [
 					<div
 						class="skill space-y-1 flex flex-col justify-center items-center"
 						v-for="skill in tools"
-						:key="skill.name"
+						:key="skill.skillName"
 					>
 						<img
 							:src="skill.skillImgPath"
-							:alt="skill.name"
+							:alt="skill.skillName"
 							:class="`${skill.magnified ? 'w-20' : 'w-12'}`"
 						/>
 						<p

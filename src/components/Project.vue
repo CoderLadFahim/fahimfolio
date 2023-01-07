@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ProjectInterface } from '../TypescriptReusables/Interfaces';
+import { ProjectInterface } from '../TypescriptReusables/Interfaces.interface';
 
 defineProps<{project: ProjectInterface}>()
 </script>

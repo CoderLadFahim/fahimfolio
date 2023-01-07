@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import SectionTitle from '../components/SectionTitle.vue';
 import Project from '../components/Project.vue';
-import { ProjectInterface } from '../TypescriptReusables/Interfaces';
+import { ProjectInterface } from '../TypescriptReusables/Interfaces.interface';
 import { useStore } from 'vuex';
 import { computed } from 'vue';
 
