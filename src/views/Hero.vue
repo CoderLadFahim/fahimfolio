@@ -10,7 +10,7 @@ import Typewriter from '../components/Typewriter.vue';
 </script>
 
 <template>
-	<section class="Hero site-section sm:relative xl:flex xl:items-center xl:justify-between">
+	<section class="Hero site-section sm:relative xl:flex xl:items-center xl:justify-between" id="hero-section">
 		<!-- <Slideshow /> -->
 
 		<div
@@ -62,6 +62,31 @@ import Typewriter from '../components/Typewriter.vue';
 }
 
 .btn-base-styles {
-	@apply inline-block py-2 px-5 rounded-md shadow transform transition ease-out hover:scale-105 lg:text-2xl lg:px-7 lg:py-3 lg:rounded-2xl;
+	@apply
+	 	inline-block
+        py-2
+        px-5
+        transition
+		relative
+        lg:text-2xl
+        lg:px-7
+        lg:py-3;
 }
+
+.btn-base-styles::after {
+	content: '';
+	@apply
+		absolute
+		w-full
+		h-full
+		transition
+		border
+		border-green-300
+		left-0
+		top-0
+}
+
+.btn-base-styles:hover { @apply bottom-2 right-2; }
+.btn-base-styles:hover::after { @apply top-2 left-2; }
+
 </style>

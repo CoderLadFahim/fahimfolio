@@ -1,21 +1,29 @@
 <template>
 	<nav class="nav-styles ubuntu-mono">
-		<div class="nav-item pointer">
-			<font-awesome-icon icon="home" />
-			<p>Home</p>
-		</div>
-		<div class="nav-item pointer">
-			<font-awesome-icon icon="code" />
-			<p>Skills</p>
-		</div>
-		<div class="nav-item pointer">
-			<font-awesome-icon icon="project-diagram" />
-			<p>Projects</p>
-		</div>
-		<div class="nav-item pointer">
-			<font-awesome-icon icon="phone" />
-			<p>Contact</p>
-		</div>
+		<a href="#hero-section">
+			<div class="nav-item pointer">
+				<font-awesome-icon icon="home" />
+				<p>Home</p>
+			</div>
+		</a>
+		<a href="#skills-section">
+			<div class="nav-item pointer">
+				<font-awesome-icon icon="code" />
+				<p>Skills</p>
+			</div>
+		</a>
+		<a href="#projects-section">
+			<div class="nav-item pointer">
+				<font-awesome-icon icon="project-diagram" />
+				<p>Projects</p>
+			</div>
+		</a>
+		<a href="#contact-section">
+			<div class="nav-item pointer">
+				<font-awesome-icon icon="phone" />
+				<p>Contact</p>
+			</div>
+		</a>
 	</nav>
 </template>
 

@@ -21,8 +21,10 @@ body {
 	@apply bg-gray-100 overflow-x-hidden;
 	cursor: url('./assets/cursor.svg'), auto;
 }
+
 .site-section {
-	@apply min-h-screen border border-red-400;
+	/* @apply min-h-screen border border-red-400; */
+	@apply min-h-screen;
 }
 
 .pointer {

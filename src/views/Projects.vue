@@ -10,7 +10,7 @@ const projects = computed((): ProjectInterface[] => store.state.projects);
 </script>
 
 <template>
-	<section id="skills-section" class="site-section">
+	<section id="projects-section" class="site-section">
 		<SectionTitle titleText="My.Projects" />
 		<div class="project-display">
 			<Project v-for="(project, i) in projects" :project="project" :key="i" />
