@@ -14,17 +14,17 @@ const store = createStore({
 						{
 							name: 'ReactJS',
 							iconPath:
-								'/src/assets/TechLogos/React-Logo.png',
+								'/src/assets/TechLogos/reactjs.png',
 						},
 						{
 							name: 'ReduxJS',
 							iconPath:
-								'/src/assets/TechLogos/redux.png',
+								'/src/assets/TechLogos/reduxjs.png',
 						},
 						{
 							name: 'TailwindCSS',
 							iconPath:
-								'/src/assets/TechLogos/Tailwind.png',
+								'/src/assets/TechLogos/tailwindcss.png',
 						},
 						
 					]
@@ -38,7 +38,7 @@ const store = createStore({
 						{
 							name: 'VueJS',
 							iconPath:
-								'/src/assets/TechLogos/Vue-Logo.png',
+								'/src/assets/TechLogos/vuejs.png',
 						},
 						{
 							name: 'VueX',
@@ -68,19 +68,19 @@ const store = createStore({
 					},
 					{
 						skillName: 'JavaScript',
-						skillImgPath: '/src/assets/TechLogos/JS.png',
+						skillImgPath: '/src/assets/TechLogos/js.png',
 						magnified: false,
 					},
 					{
 						skillName: 'TypeScript',
-						skillImgPath: '/src/assets/TechLogos/TS.png',
+						skillImgPath: '/src/assets/TechLogos/ts.png',
 						magnified: false,
 					},
 				]	,
 				frameworks: [
 					{
 						skillName: 'VueJS',
-						skillImgPath: '/src/assets/TechLogos/Vue-Logo.png',
+						skillImgPath: '/src/assets/TechLogos/vuejs.png',
 						magnified: true,
 					},
 					{
@@ -91,18 +91,18 @@ const store = createStore({
 					},
 					{
 						skillName: 'ReactJS',
-						skillImgPath: '/src/assets/TechLogos/React-Logo.png',
+						skillImgPath: '/src/assets/TechLogos/reactjs.png',
 						magnified: true,
 					},
 					{
 						skillName: 'ReduxJS',
-						skillImgPath: '/src/assets/TechLogos/redux.png',
+						skillImgPath: '/src/assets/TechLogos/reduxjs.png',
 						magnified: false,
 						isSeparator: true,
 					},
 					{
 						skillName: 'TailwindCSS',
-						skillImgPath: '/src/assets/TechLogos/Tailwind.png',
+						skillImgPath: '/src/assets/TechLogos/tailwindcss.png',
 						magnified: false,
 					},
 					{
