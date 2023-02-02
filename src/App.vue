@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import NavBar from './components/navbar.vue';
+import NavBar from './components/NavBar.vue';
 // import Cursor from './cursor.vue';
 import ContactSection from './views/Contact.vue';
 import HeroSection from './views/Hero.vue';

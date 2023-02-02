@@ -1,18 +1,9 @@
 <script setup lang="ts">
 import Typewriter from '../components/Typewriter.vue';
-/* import Slideshow from '../components/Slideshow.vue'; */
-/*  */
-/* const cvBtnClickHandler = () => { */
-/* const downloadLink = */
-/* 'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download'; */
-/* window.open(downloadLink, '_blank'); */
-/* }; */
 </script>
 
 <template>
 	<section class="Hero site-section sm:relative xl:flex xl:items-center xl:justify-between" id="hero-section">
-		<!-- <Slideshow /> -->
-
 		<div
 			id="content"
 			class="px-6 space-y-5 sm:px-11 lg:space-y-8 sm:mt-56 xl:w-3/5 xl:order-first xl:m-0 xl:ml-36 xl:px-0"

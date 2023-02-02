@@ -6,7 +6,7 @@ import { useStore } from 'vuex';
 import { computed } from 'vue';
 
 const store = useStore();
-const projects = computed((): ProjectInterface[] => store.state.projects);
+const projects = computed<ProjectInterface[]>(() => store.state.projects);
 </script>
 
 <template>
