@@ -43,6 +43,7 @@ const allInputsValid = computed<boolean>(
 			<AppButton
 				btn-text="Get in Touch!"			
 				btn-parent-class="w-40 hover:border-purple-400"
+				type="button"
 				btn-class="bg-purple-400 text-white border-purple-400"
 				:is-disabled="!allInputsValid"
 			/>

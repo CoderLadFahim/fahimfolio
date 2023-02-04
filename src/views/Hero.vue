@@ -21,10 +21,10 @@ const handleCvDownloadClick = (): void => {
 			<Typewriter />
 
 			<div class="space-x-4">
-				<AppButton @click="handleCvDownloadClick" btn-text="Download CV" btn-parent-class="hover:border-green-400"
+				<AppButton type="button" @click="handleCvDownloadClick" btn-text="Download CV" btn-parent-class="hover:border-green-400"
 					btn-class="bg-green-400 border-none text-white" />
 
-				<AppButton btn-text="Contact me" />
+				<AppButton type="anchor" btn-text="Contact me" href="#contact-section" />
 			</div>
 		</div>
 	</section>
