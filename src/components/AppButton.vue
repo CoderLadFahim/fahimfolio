@@ -7,7 +7,7 @@ const handleBtnClick = (e: MouseEvent): void => {
 
 <template>
 	<div
-		class="app-button text-slate-600 inline-block ubuntu-mono relative w-24 h-10"
+		class="app-button text-slate-600 border border-transparent inline-block ubuntu-mono relative w-24 h-10 transition duration-150"
 		@click="handleBtnClick"
 	>
 		<button class="border border-slate-600 absolute transition duration-150 bg-white w-full h-full">Click me</button>
@@ -20,6 +20,6 @@ const handleBtnClick = (e: MouseEvent): void => {
 }
 
 .app-button:hover button {
-	@apply bottom-1 right-1; 
+	@apply -translate-x-1 -translate-y-1; 
 }
 </style>
