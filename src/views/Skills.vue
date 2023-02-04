@@ -55,8 +55,4 @@ const tools = computed((): SkillInterface[] => store.state.skills.tools);
 .skill-col {
 	@apply bg-gray-50 rounded-lg w-5/12 sm:w-1/4 xl:w-1/6 border-2 border-green-300 sm:rounded-lg sm:border-0 overflow-hidden sm:shadow-md xl:rounded-2xl 3xl:shadow-lg;
 }
-
-.col-header {
-	@apply bg-green-300 text-white text-center py-2 px-0 text-xs xl:py-3 xl:text-lg;
-}
 </style>
