@@ -19,7 +19,7 @@ const handleBtnClick = (e: MouseEvent): void => emit("click", e);
 
 <template>
 	<div
-		:class="`app-button text-slate-600 border border-transparent inline-block ubuntu-mono relative w-24 h-10 transition duration-150 ${props.btnParentClass}`"
+		:class="`app-button text-slate-600 border-transparent inline-block ubuntu-mono relative w-28 h-10 transition duration-150 hover:border hover:border-slate-600 ${props.btnParentClass}`"
 		@click="handleBtnClick">
 		<button :class="`border border-slate-600 absolute transition duration-150 bg-white w-full h-full ${props.btnClass}`">
 			{{ props.btnText }}
@@ -28,10 +28,6 @@ const handleBtnClick = (e: MouseEvent): void => emit("click", e);
 </template>
 
 <style scoped>
-.app-button:hover {
-	@apply border border-slate-600;
-}
-
 .app-button:hover button {
 	@apply -translate-x-1 -translate-y-1;
 }

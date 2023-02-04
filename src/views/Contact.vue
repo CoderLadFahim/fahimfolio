@@ -14,6 +14,7 @@ const allInputsValid = computed(() => name.value && companyName.value && emailRe
 <template>
 	<section
 		id="contact-section"
+		ref="contactSectionElementRef"
 		class="w-11/12 mx-auto flex flex-col items-center site-section"
 	>
 		<SectionTitle titleText="Contact.Me" />
