@@ -2,7 +2,8 @@
 import Typewriter from "../components/Typewriter.vue";
 import AppButton from "../components/AppButton.vue";
 
-const cvDownloadLink = 'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download';
+const cvDownloadLink =
+	"https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download";
 </script>
 
 <template>
@@ -17,8 +18,8 @@ const cvDownloadLink = 'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25y
 			<Typewriter />
 
 			<div class="space-x-4">
-				<AppButton type="anchor" :href="cvDownloadLink" btn-text="Download CV" btn-parent-class="hover:border-sky-400"
-					btn-class="bg-sky-400 border-none text-white" />
+				<AppButton type="anchor" :href="cvDownloadLink" btn-text="Download CV"
+					btn-parent-class="hover:border-sky-400" btn-class="bg-sky-400 border-none text-white" />
 
 				<AppButton type="anchor" btn-text="Contact me" href="#contact-section" />
 			</div>
