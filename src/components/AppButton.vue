@@ -7,17 +7,16 @@ const handleBtnClick = (e: MouseEvent): void => {
 
 <template>
 	<div
-		class="app-button text-slate-600 inline-block ubuntu-mono"
+		class="app-button text-slate-600 inline-block ubuntu-mono relative w-24 h-10"
 		@click="handleBtnClick"
 	>
-		<!-- <div class="background-border"></div> -->
-		<button class="border border-slate-600 px-7 py-3 relative transition bg-white">Click me</button>
+		<button class="border border-slate-600 absolute transition duration-150 bg-white w-full h-full">Click me</button>
 	</div>
 </template>
 
 <style scoped>
 .app-button:hover {
-	@apply border border-slate-400; 
+	@apply border border-slate-600; 
 }
 
 .app-button:hover button {
