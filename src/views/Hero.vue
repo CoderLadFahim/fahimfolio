@@ -45,14 +45,6 @@ const handleButtonClick = (e: MouseEvent) => {
 </template>
 
 <style>
-/* #first-name {
-	color: #06b6d4;
-}
-
-#contact-btn {
-	color: #06b6d4;
-} */
-
 #cv-download-btn {
 	color: #fff;
 	background: linear-gradient(90deg, #51c9bf 2.5%, #06b6d4 100%);
