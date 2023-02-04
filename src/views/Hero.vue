@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import Typewriter from '../components/Typewriter.vue';
+import AppButton from '../components/AppButton.vue';
+
+const handleButtonClick = (e: MouseEvent) => {
+	console.log(e);
+};
 </script>
 
 <template>
@@ -18,7 +23,7 @@ import Typewriter from '../components/Typewriter.vue';
 
 			<Typewriter />
 
-			<div id="action-calls" class="space-x-6">
+			<div id="action-calls" class="space-x-6" v-if="false">
 				<a
 					id="cv-download-btn"
 					href="https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download"
@@ -34,6 +39,7 @@ import Typewriter from '../components/Typewriter.vue';
 					>Contact me</a
 				>
 			</div>
+			<AppButton @click="handleButtonClick" v-else />
 		</div>
 	</section>
 </template>
