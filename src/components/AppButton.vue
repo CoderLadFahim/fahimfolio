@@ -22,4 +22,8 @@ const handleBtnClick = (e: MouseEvent): void => {
 .app-button:hover button {
 	@apply -translate-x-1 -translate-y-1; 
 }
+
+.app-button:hover button:active {
+	@apply -translate-x-0 -translate-y-0; 
+}
 </style>
