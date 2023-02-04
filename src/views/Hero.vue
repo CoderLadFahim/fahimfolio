@@ -2,11 +2,7 @@
 import Typewriter from "../components/Typewriter.vue";
 import AppButton from "../components/AppButton.vue";
 
-const handleCvDownloadClick = (): void => {
-	const cvDownloadLink = 'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download';
-	window.open(cvDownloadLink, '_blank');
-};
-
+const cvDownloadLink = 'https://drive.google.com/uc?id=1izIFQ0DmIW-LU6tZa79Yy25yCDfs6SaD&export=download';
 </script>
 
 <template>
@@ -21,7 +17,7 @@ const handleCvDownloadClick = (): void => {
 			<Typewriter />
 
 			<div class="space-x-4">
-				<AppButton type="button" @click="handleCvDownloadClick" btn-text="Download CV" btn-parent-class="hover:border-green-400"
+				<AppButton type="anchor" :href="cvDownloadLink" btn-text="Download CV" btn-parent-class="hover:border-green-400"
 					btn-class="bg-green-400 border-none text-white" />
 
 				<AppButton type="anchor" btn-text="Contact me" href="#contact-section" />

@@ -36,10 +36,6 @@ const allInputsValid = computed<boolean>(
 
 			<input type="hidden" name="_captcha" value="false" />
 
-			<!-- <button type="submit" class="submit-btn fira-code-bold pointer" :disabled="!allInputsValid" -->
-			<!-- 	:class="{ disabled: !allInputsValid }"> -->
-			<!-- 	Get In Touch! -->
-			<!-- </button> -->
 			<AppButton
 				btn-text="Get in Touch!"			
 				btn-parent-class="w-40 hover:border-purple-400"
