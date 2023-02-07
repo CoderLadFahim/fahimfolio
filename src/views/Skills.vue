@@ -6,10 +6,18 @@ import SectionTitle from '../components/SectionTitle.vue';
 import SkillColumn from '../components/SkillColumn.vue';
 import { SkillInterface } from '../TypescriptReusables/Interfaces.interface';
 
+import Rellax from 'rellax';
+import { onMounted } from "vue";
+
+onMounted(() => {
+	const rellax = new Rellax('.rellax');
+});
+
 const store = useStore();
 const languages = computed((): SkillInterface[] => store.state.skills.languages);
 const frameworks = computed((): SkillInterface[] => store.state.skills.frameworks);
 const tools = computed((): SkillInterface[] => store.state.skills.tools);
+
 </script>
 
 <template>
