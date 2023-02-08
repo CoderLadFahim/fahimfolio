@@ -9,7 +9,7 @@ const cvDownloadLink =
 <template>
 	<section class="Hero site-section sm:relative xl:flex xl:items-center xl:justify-between" id="hero-section">
 		<div id="content"
-			class="px-6 space-y-5 mt-56 text-center sm:px-11 lg:space-y-8 sm:mt-56 xl:w-3/5 xl:order-first xl:m-0 xl:ml-36 xl:px-0 xl:text-start">
+			class="px-6 space-y-5 mt-64 text-center sm:px-11 lg:space-y-8 sm:mt-56 xl:w-3/5 xl:order-first xl:m-0 xl:ml-36 xl:px-0 xl:text-start">
 			<h1 id="author-title" class="source-code-pro-bold text-4xl text-gray-600 sm:text-5xl lg:text-7xl xl:text-5xl">
 				<span id="first-name" class="source-code-pro-black text-sky-400">Fahim</span>
 				al Emroz
