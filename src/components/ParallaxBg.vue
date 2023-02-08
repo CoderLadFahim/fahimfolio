@@ -9,7 +9,7 @@ onMounted(() => {
 
 
 <template>
-	<div class="bg absolute top-0 left-0 bottom-0 right-0 border border-teal-500 pointer-events-none -z-10">
+	<div class="bg absolute top-0 left-0 bottom-0 right-0 pointer-events-none -z-10">
 		<!-- first column -->
 		<div class="line w-[1px] absolute top-0 bottom-0 left-[10%] bg-slate-200 hidden sm:block">
 			<svg class="rellax absolute top-10 -left-[28px]" data-rellax-speed="-4" width="56" height="56"
