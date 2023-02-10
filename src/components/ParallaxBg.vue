@@ -11,7 +11,7 @@ onMounted(() => {
 <template>
 	<div class="bg absolute top-0 left-0 bottom-0 right-0 pointer-events-none -z-10">
 		<!-- first column -->
-		<div class="line w-[1px] absolute top-0 bottom-0 left-[10%] bg-slate-200 hidden sm:block">
+		<div class="line w-[1px] absolute top-0 bottom-0 left-[10%] hidden sm:block">
 			<svg class="rellax absolute top-10 -left-[28px]" data-rellax-speed="-4" width="56" height="56"
 				viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<rect class="fill-indigo-200" x="-2.56836" y="54" width="80" height="80" rx="8" transform="rotate(-45 -2.56836 54)" />
@@ -19,7 +19,7 @@ onMounted(() => {
 		</div>
 
 		<!-- second column -->
-		<div class="line w-[1px] absolute top-0 bottom-0 left-[30%] bg-slate-200">
+		<div class="line w-[1px] absolute top-0 bottom-0 left-[30%]">
 			<svg class="rellax absolute top-24 -left-[28px]" data-rellax-speed="-6" width="56" height="56"
 				viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<rect class="fill-green-200" x="-2.56836" y="54" width="80" height="80" rx="8"
@@ -33,7 +33,7 @@ onMounted(() => {
 			</svg>
 		</div>
 
-		<div class="line w-[1px] absolute top-0 bottom-0 left-[50%] bg-slate-200 hidden sm:block">
+		<div class="line w-[1px] absolute top-0 bottom-0 left-[50%]  hidden sm:block">
 			<!-- <svg class="rellax absolute top-[25rem] -left-[18px]" data-rellax-speed="-4" width="36" height="36" -->
 			<!-- 	viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
 			<!-- 	<rect x="-2.56836" y="54" width="80" height="80" rx="8" transform="rotate(-45 -2.56836 54)" -->
@@ -52,7 +52,7 @@ onMounted(() => {
 		</div>
 
 		<!-- third column -->
-		<div class="line w-[1px] absolute top-0 bottom-0 right-[30%] bg-slate-200">
+		<div class="line w-[1px] absolute top-0 bottom-0 right-[30%] ">
 			<svg class="rellax absolute top-56 -left-[48px]" data-rellax-speed="-5" width="96" height="96"
 				viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<rect class="fill-teal-200" x="-2.56836" y="54" width="80" height="80" rx="8"
@@ -67,7 +67,7 @@ onMounted(() => {
 		</div>
 
 		<!-- fourth column -->
-		<div class="line w-[1px] absolute top-0 bottom-0 right-[10%] bg-slate-200 hidden sm:block">
+		<div class="line w-[1px] absolute top-0 bottom-0 right-[10%] hidden sm:block">
 			<svg class="rellax absolute top-[25rem] -left-[18px]" data-rellax-speed="-5" width="36" height="36"
 				viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<rect x="-2.56836" y="54" width="80" height="80" rx="8" transform="rotate(-45 -2.56836 54)"
@@ -76,3 +76,9 @@ onMounted(() => {
 		</div>
 	</div>
 </template>
+
+<style>
+.line {
+	@apply bg-slate-200;
+}
+</style>
