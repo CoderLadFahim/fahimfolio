@@ -61,6 +61,6 @@ const tools = computed((): SkillInterface[] => store.state.skills.tools);
 }
 
 .skill-col {
-	@apply bg-gray-50 rounded-lg w-5/12 sm:w-1/4 xl:w-1/6 border-2 border-green-300 sm:rounded-lg sm:border-0 overflow-hidden sm:shadow-md xl:rounded-2xl 3xl:shadow-lg;
+	@apply bg-gray-50 rounded-lg w-5/12 sm:w-1/4 xl:w-64 border-2 border-green-300 sm:rounded-lg sm:border-0 overflow-hidden sm:shadow-md xl:rounded-2xl 3xl:shadow-lg; 
 }
 </style>

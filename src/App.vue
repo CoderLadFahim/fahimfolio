@@ -22,6 +22,11 @@ const percentageScrolled = ref<number>(0);
 onMounted(() => {
 	window.addEventListener('scroll', () => {
 		const pixelsFromTheTop = +window.scrollY;
+
+
+
+
+
 		const bodyHeight = +document.querySelector('html').scrollHeight - window.innerHeight;
 		percentageScrolled.value = (pixelsFromTheTop / bodyHeight) * 100;
 	});
