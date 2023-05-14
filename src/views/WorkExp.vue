@@ -8,7 +8,7 @@ const store = useStore();
 </script>
 
 <template>
-	<section id="skills-section" class="site-section">
+	<section id="skills-section" class="site-section mt-40">
 		<SectionTitle titleText="Work.Experiences" />
 
 		<div class="company-card-wrapper flex justify-evenly items-center mt-28">
