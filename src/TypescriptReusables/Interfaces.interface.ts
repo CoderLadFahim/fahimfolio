@@ -9,6 +9,7 @@ export interface ProjectInterface {
     link: string,
     title: string,
     dependencies: dependencyDetailsInterface[],
+    description: string
 }
 
 export interface SkillInterface {
@@ -17,4 +18,12 @@ export interface SkillInterface {
     magnified: boolean,
     type: string,
 	isSeparator?: boolean,
+}
+
+export interface JobInterface {
+    name: string,
+    imgPath: string,
+    location: string,
+    link: string,
+    duration: string
 }

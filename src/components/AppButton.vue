@@ -3,12 +3,12 @@ const emit = defineEmits(["click"]);
 
 const props = withDefaults(
 	defineProps<{
-		btnText: string;
-		btnClass: string;
-		isDisabled: boolean;
+		btnText?: string;
+		btnClass?: string;
+		isDisabled?: boolean;
 		type: 'button' | 'anchor';
-		href: string,
-		btnParentClass: string;
+		href?: string,
+		btnParentClass?: string;
 	}>(),
 	{
 		btnText: "Click me",
@@ -31,7 +31,7 @@ const handleBtnClick = (e: MouseEvent): void => emit("click", e);
 			{{ props.btnText }}
 		</button>
 
-		<a v-else :disabled="props.isDisabled" :href="props.href"
+		<a v-else :disabled="props.isDisabled" :href="props.href" target="_blank"
 			:class="`button border grid place-items-center pointer disabled:opacity-50 disabled:pointer-events-none border-slate-600 absolute transition duration-150 bg-gray-100 w-full h-full ${props.btnClass}`">
 			{{ props.btnText }}
 		</a>

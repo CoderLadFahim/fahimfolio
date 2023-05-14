@@ -8,11 +8,14 @@ defineProps<{project: ProjectInterface}>()
 	 <div class="project flex align-start gap-4 relative">
 		  <div class="w-72 space-y-7">
 				<img class="thumbnail w-full h-52 rounded shadow-md" :src="project.thumbnail" alt="Project Thumbnail" />
-				<div class="info-bar rounded-md bg-white shadow-md flex align-center justify-between p-3">
-					 <p class= "project-title ubuntu-mono-bold custom-blue">{{ project.title }}</p>
-					 <div class="dependencies flex align-center space-x-3">
-						<img v-for="(dependency, i) in project.dependencies" :key="i" class="w-6 h-6" :src="dependency.iconPath"  alt="Project Thumbnail"  />
-					 </div>
+				<div class="info-bar rounded-md bg-white shadow-md p-3 h-12 overflow-hidden transition-all duration-150">
+                    <div class="flex align-center justify-between mb-5">
+					    <p class= "project-title ubuntu-mono-bold custom-blue">{{ project.title }}</p>
+					    <div class="dependencies flex align-center space-x-3">
+						    <img v-for="(dependency, i) in project.dependencies" :key="i" class="w-6 h-6" :src="dependency.iconPath"  alt="Project Thumbnail"  />
+					    </div>
+                    </div>
+			        <p class="fira-code text-gray-500 text-sm">{{ project.description }}</p>
 				</div>
 		  </div>
 		  <div class="project-actions space-y-4 sm:absolute right-3 top-3 bg-gray-600 rounded-full p-1 self-start border-2 border-gray-700">
@@ -42,6 +45,10 @@ defineProps<{project: ProjectInterface}>()
 
 .project:hover .project-actions {
 	@apply sm:opacity-100;
+}
+
+.project:hover .info-bar {
+	@apply h-[5.5rem];
 }
 
 .project-actions a {
