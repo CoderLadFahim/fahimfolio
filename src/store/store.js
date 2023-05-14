@@ -147,7 +147,7 @@ const store = createStore({
                     imgPath: '/CompanyLogos/cism_logo.png',
                     location: 'Uttara, Dhaka',
                     link: 'https://www.classicit.com.bd/',
-                    duration: 'Nov 2021 - Feb 2023'
+                    duration: 'Nov 2021 - Feb 2022'
                 },
                 {
                     name: 'Gain Solutions',
