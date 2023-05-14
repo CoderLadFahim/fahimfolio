@@ -140,7 +140,23 @@ const store = createStore({
 						magnified: false,
 					},
 				]
-			}
+			},
+			jobs: [
+                {
+                    name: 'Classic IT',
+                    imgPath: '/CompanyLogos/cism_logo.png',
+                    location: 'Uttara, Dhaka',
+                    link: 'https://www.classicit.com.bd/',
+                    duration: 'Nov 2021 - Feb 2023'
+                },
+                {
+                    name: 'Gain Solutions',
+                    imgPath: '/CompanyLogos/gs_logo.png',
+                    location: 'Mirpur-12, Dhaka',
+                    link: 'https://gain.solutions/',
+                    duration: 'Mar 2022 - present'
+                }
+			]
 		};
 	},
 	getters: {},

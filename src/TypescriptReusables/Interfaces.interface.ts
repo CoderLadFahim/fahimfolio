@@ -19,3 +19,11 @@ export interface SkillInterface {
     type: string,
 	isSeparator?: boolean,
 }
+
+export interface JobInterface {
+    name: string,
+    imgPath: string,
+    location: string,
+    link: string,
+    duration: string
+}
