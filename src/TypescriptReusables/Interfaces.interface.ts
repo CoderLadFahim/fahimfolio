@@ -9,6 +9,7 @@ export interface ProjectInterface {
     link: string,
     title: string,
     dependencies: dependencyDetailsInterface[],
+    description: string
 }
 
 export interface SkillInterface {

@@ -3,6 +3,7 @@
 	<HeroSection />
 	<ProjectsSection />
 	<SkillsSection />
+    <WorkExp />
 	<ContactSection />
 	<NavBar />
 	<ParallaxBg />
@@ -16,17 +17,13 @@ import ContactSection from "./views/Contact.vue";
 import HeroSection from "./views/Hero.vue";
 import SkillsSection from "./views/Skills.vue";
 import ProjectsSection from "./views/Projects.vue";
+import WorkExp from "./views/WorkExp.vue";
 import { onMounted, ref } from "vue";
 
 const percentageScrolled = ref<number>(0);
 onMounted(() => {
 	window.addEventListener('scroll', () => {
 		const pixelsFromTheTop = +window.scrollY;
-
-
-
-
-
 		const bodyHeight = +document.querySelector('html').scrollHeight - window.innerHeight;
 		percentageScrolled.value = (pixelsFromTheTop / bodyHeight) * 100;
 	});

@@ -10,6 +10,7 @@ const store = createStore({
 					sourceCodeLink: 'https://github.com/CoderLadFahim/readit',
 					link: 'https://readreddit.netlify.app/',
 					title: 'Readit',
+					description: 'A read-only Reddit client',
 					dependencies: [
 						{
 							name: 'ReactJS',
@@ -34,6 +35,7 @@ const store = createStore({
 						'/ProjectPreviews/SaleXPreview.png',
 					link: 'https://core-pos.dev.gainhq.com/admin/users/login',
 					title: 'SaleX',
+					description: 'An inventory management system',
 					dependencies: [
 						{
 							name: 'VueJS',

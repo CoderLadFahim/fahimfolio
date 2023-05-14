@@ -26,7 +26,6 @@ const projects = computed<ProjectInterface[]>(() => store.state.projects);
 		py-14
 		flex
 		flex-col 
-		items-center 
 
 		sm:flex-row 
 		sm:flex-wrap 
