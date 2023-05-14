@@ -26,6 +26,7 @@ const projects = computed<ProjectInterface[]>(() => store.state.projects);
 		py-14
 		flex
 		flex-col 
+	    items-center
 
 		sm:flex-row 
 		sm:flex-wrap 
@@ -33,6 +34,7 @@ const projects = computed<ProjectInterface[]>(() => store.state.projects);
 		sm:space-y-0 
 		sm:gap-5 
 		sm:gap-y-10 
+		sm:items-start 
 
 		md:space-y-0 
 		md:gap-10 

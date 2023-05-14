@@ -29,7 +29,7 @@ const allInputsValid = computed<boolean>(
 
 			<Input labelText="Email" idMatcher="email" field="EMAIL" :regex="emailRegex" v-model="email" />
 
-			<textarea class="rounded-lg py-2 px-3 fira-code sm:w-full sm:h-72 shadow sm:py-3 sm:px-4 md:h-80 md:h-96"
+			<textarea class="rounded-lg source-code-pro py-2 px-3 sm:w-full sm:h-72 shadow sm:py-3 sm:px-4 md:h-80 md:h-96"
 				name="visitor-message" required cols="25" rows="9" placeholder="Your message here"></textarea>
 
 			<input type="hidden" name="_next" value="https://fahimfolio.netlify.app" />
