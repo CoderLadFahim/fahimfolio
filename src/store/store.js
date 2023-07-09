@@ -54,6 +54,81 @@ const store = createStore({
 						},
 						
 					]
+				},
+                {
+					thumbnail:
+						'/ProjectPreviews/ReadykitPreview.png',
+					link: 'https://readykit.gainhq.com/admin/users/login',
+					title: 'ReadyKit',
+					description: 'A robust component library',
+					dependencies: [
+						{
+							name: 'VueJS',
+							iconPath:
+								'/TechLogos/vuejs.png',
+						},
+						{
+							name: 'VueX',
+							iconPath:
+								'/TechLogos/vuex.png',
+						},
+						{
+							name: 'Bootstrap',
+							iconPath:
+								'/TechLogos/bootstrap.png',
+						},
+						
+					]
+				},
+                {
+					thumbnail:
+						'/ProjectPreviews/PipexPreview.png',
+					link: 'https://pipex.gainhq.com/admin/users/login',
+					title: 'Pipex',
+					description: 'A CRM application',
+					dependencies: [
+						{
+							name: 'VueJS',
+							iconPath:
+								'/TechLogos/vuejs.png',
+						},
+						{
+							name: 'VueX',
+							iconPath:
+								'/TechLogos/vuex.png',
+						},
+						{
+							name: 'Bootstrap',
+							iconPath:
+								'/TechLogos/bootstrap.png',
+						},
+						
+					]
+				},
+                {
+					thumbnail:
+						'/ProjectPreviews/PaydayPreview.png',
+					link: 'https://payday.gainhq.com/admin/users/login',
+					title: 'PayDay',
+					description: 'An HRM application',
+					dependencies: [
+						{
+							name: 'VueJS',
+							iconPath:
+								'/TechLogos/vuejs.png',
+						},
+						{
+							name: 'VueX',
+							iconPath:
+								'/TechLogos/vuex.png',
+						},
+						{
+							name: 'Bootstrap',
+							iconPath:
+								'/TechLogos/bootstrap.png',
+						},
+						
+					]
 				}
 			],
 			skills: { 
