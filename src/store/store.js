@@ -10,7 +10,7 @@ const store = createStore({
 					sourceCodeLink: 'https://github.com/CoderLadFahim/readit',
 					link: 'https://readreddit.netlify.app/',
 					title: 'Readit',
-					description: 'A read-only Reddit client',
+					description: 'Read-only Reddit client',
 					dependencies: [
 						{
 							name: 'ReactJS',
@@ -35,7 +35,7 @@ const store = createStore({
 						'/ProjectPreviews/SaleXPreview.png',
 					link: 'https://core-pos.dev.gainhq.com/admin/users/login',
 					title: 'SaleX',
-					description: 'An inventory management system',
+					description: 'Inventory management system',
 					dependencies: [
 						{
 							name: 'VueJS',
@@ -60,7 +60,7 @@ const store = createStore({
 						'/ProjectPreviews/ReadykitPreview.png',
 					link: 'https://readykit.gainhq.com/admin/users/login',
 					title: 'ReadyKit',
-					description: 'A robust component library',
+					description: 'Component library',
 					dependencies: [
 						{
 							name: 'VueJS',
@@ -111,6 +111,31 @@ const store = createStore({
 					link: 'https://payday.gainhq.com/admin/users/login',
 					title: 'PayDay',
 					description: 'An HRM application',
+					dependencies: [
+						{
+							name: 'VueJS',
+							iconPath:
+								'/TechLogos/vuejs.png',
+						},
+						{
+							name: 'VueX',
+							iconPath:
+								'/TechLogos/vuex.png',
+						},
+						{
+							name: 'Bootstrap',
+							iconPath:
+								'/TechLogos/bootstrap.png',
+						},
+						
+					]
+				},
+                {
+					thumbnail:
+						'/ProjectPreviews/JobpointPreview.png',
+					link: 'https://jobpoint.gainhq.com/admin/users/login',
+					title: 'JobPoint',
+					description: 'Recruit management system',
 					dependencies: [
 						{
 							name: 'VueJS',
