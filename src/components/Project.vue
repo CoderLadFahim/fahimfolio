@@ -16,7 +16,7 @@ defineProps<{project: ProjectInterface}>()
 				class="info-bar rounded-md bg-white shadow-md p-3 h-12 overflow-hidden transition-all duration-150"
 			>
 				<div class="flex align-center justify-between mb-5">
-					<p class="project-title ubuntu-mono-bold custom-blue">
+					<p class="project-title source-code-pro-bold custom-blue">
 						{{ project.title }}
 					</p>
 					<div class="dependencies flex align-center space-x-3">
@@ -33,15 +33,17 @@ defineProps<{project: ProjectInterface}>()
 				</div>
 			</div>
 			<div
-				class="project-description sm:opacity-5 bg-teal-400 text-white text-sm fira-code py-2 px-3 rounded absolute top-32 left-3"
+				class="project-description sm:opacity-5 bg-teal-400 text-white text-sm fira-code-bold py-2 px-3 rounded absolute top-32 left-3"
 			>
 				<p>{{ project.description }}</p>
 			</div>
 		</div>
 		<div
 			class="project-actions space-y-4 sm:absolute right-3 top-3 bg-gray-600 rounded-full p-1 self-start border-2 border-gray-700"
+			v-if="project.link || project.sourceCodeLink"
 		>
 			<a
+				v-if="project.link"
 				:href="project.link"
 				target="_blank"
 				class="bg-purple-300 text-white"

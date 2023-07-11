@@ -1,5 +1,5 @@
 <template>
-	<nav class="nav-styles ubuntu-mono">
+	<nav class="nav-styles source-code-pro">
 		<a href="#hero-section">
 			<div class="nav-item pointer">
 				<font-awesome-icon icon="home" />

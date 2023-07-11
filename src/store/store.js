@@ -58,9 +58,34 @@ const store = createStore({
                 {
 					thumbnail:
 						'/ProjectPreviews/ReadykitPreview.png',
+					link: '',
+					title: 'Core.v2',
+					description: 'Component library (Vue3+TS)',
+					dependencies: [
+						{
+							name: 'VueJS',
+							iconPath:
+								'/TechLogos/vuejs.png',
+						},
+						{
+							name: 'Pinia',
+							iconPath:
+								'/TechLogos/pinia.png',
+						},
+						{
+							name: 'Bootstrap',
+							iconPath:
+								'/TechLogos/bootstrap.png',
+						},
+						
+					]
+				},
+                {
+					thumbnail:
+						'/ProjectPreviews/ReadykitPreview.png',
 					link: 'https://readykit.gainhq.com/admin/users/login',
 					title: 'ReadyKit',
-					description: 'Component library',
+					description: 'Component library (Vue2)',
 					dependencies: [
 						{
 							name: 'VueJS',
@@ -84,7 +109,7 @@ const store = createStore({
 					thumbnail:
 						'/ProjectPreviews/PipexPreview.png',
 					link: 'https://pipex.gainhq.com/admin/users/login',
-					title: 'Pipex',
+					title: 'PipeX',
 					description: 'A CRM application',
 					dependencies: [
 						{
@@ -185,6 +210,11 @@ const store = createStore({
 						skillImgPath: '/TechLogos/vuejs.png',
 						magnified: true,
 					},
+                    {
+						skillName: 'Pinia',
+						skillImgPath: '/TechLogos/pinia.png',
+						magnified: false,
+					},
 					{
 						skillName: 'VueX',
 						skillImgPath: '/TechLogos/vuex.png',
@@ -214,19 +244,24 @@ const store = createStore({
 					},
 				],
 				tools: [
+                    {
+						skillName: 'Vite',
+						skillImgPath: '/TechLogos/vite.png',
+						magnified: false,
+					},
 					{
 						skillName: 'Figma',
 						skillImgPath: '/TechLogos/figma.png',
 						magnified: false,
 					},
-					{
-						skillName: 'WSL2',
-						skillImgPath: '/TechLogos/linux.png',
-						magnified: false,
-					},
-					{
+                    {
 						skillName: 'Vim',
 						skillImgPath: '/TechLogos/vim.png',
+						magnified: false,
+					},
+                    {
+						skillName: 'Linux terminal',
+						skillImgPath: '/TechLogos/linux.png',
 						magnified: false,
 					},
 					{
@@ -234,11 +269,11 @@ const store = createStore({
 						skillImgPath: '/TechLogos/git.png',
 						magnified: false,
 					},
-					{
-						skillName: 'GitHub',
-						skillImgPath: '/TechLogos/github.png',
-						magnified: false,
-					},
+					// {
+					// 	skillName: 'GitHub',
+					// 	skillImgPath: '/TechLogos/github.png',
+					// 	magnified: false,
+					// },
 				]
 			},
 			jobs: [

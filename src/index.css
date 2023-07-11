@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Code+Pro:wght@400;700;900&family=Ubuntu+Mono:wght@400;700&display=swap');
+@import 
+url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Code+Pro:wght@400;700;900&display=swap');
 
 /* ./src/index.css */
 @tailwind base;
@@ -21,14 +22,6 @@ body .custom-blue {
 	color: #06b6d4;
 }
 
-.ubuntu-mono {
-	font-family: 'Ubuntu Mono', Arial, Helvetica, sans-serif;
-	font-weight: 400;
-}
-.ubuntu-mono-bold {
-	font-family: 'Ubuntu Mono', Arial, Helvetica, sans-serif;
-	font-weight: 700;
-}
 .source-code-pro {
 	font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
 	font-weight: 400;
