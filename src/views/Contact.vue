@@ -17,7 +17,7 @@ const allInputsValid = computed<boolean>(
 
 <template>
 	<section id="contact-section" ref="contactSectionElementRef"
-		class="w-11/12 mx-auto flex flex-col items-center site-section mb-10">
+		class="w-11/12 mx-auto flex flex-col items-center site-section mb-20">
 		<SectionTitle titleText="Contact.Me" />
 
 		<form action="https://formsubmit.co/fahimalemroz@gmail.com" name="contactForm" method="post"

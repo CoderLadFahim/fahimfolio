@@ -6,16 +6,22 @@
 				<p>Home</p>
 			</div>
 		</a>
+		<a href="#projects-section">
+			<div class="nav-item pointer">
+				<font-awesome-icon icon="project-diagram" />
+				<p>Projects</p>
+			</div>
+		</a>
 		<a href="#skills-section">
 			<div class="nav-item pointer">
 				<font-awesome-icon icon="code" />
 				<p>Skills</p>
 			</div>
 		</a>
-		<a href="#projects-section">
+        <a href="#experience-section">
 			<div class="nav-item pointer">
-				<font-awesome-icon icon="project-diagram" />
-				<p>Projects</p>
+				<font-awesome-icon icon="briefcase" />
+			    <p>Experience</p>
 			</div>
 		</a>
 		<a href="#contact-section">
@@ -52,7 +58,7 @@
 
 		xl:flex-col
 		xl:w-16
-		xl:h-3/5
+		xl:h-3/4
 		xl:top-1/2
 		xl:-translate-y-1/2
 		xl:left-14

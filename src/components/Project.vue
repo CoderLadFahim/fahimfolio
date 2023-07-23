@@ -5,8 +5,8 @@ defineProps<{project: ProjectInterface}>()
 </script>
 
 <template>
-	<div class="project flex align-start gap-4 relative">
-		<div class="w-72 space-y-7 relative">
+	<div class="project w-72 gap-4 relative">
+		<div class="space-y-2 relative">
 			<img
 				class="thumbnail w-full h-52 rounded shadow-md"
 				:src="project.thumbnail"
@@ -32,14 +32,13 @@ defineProps<{project: ProjectInterface}>()
 					</div>
 				</div>
 			</div>
-			<div
-				class="project-description sm:opacity-5 bg-teal-400 text-white text-sm fira-code-bold py-2 px-3 rounded absolute top-32 left-3"
+			<div class="project-description sm:opacity-5 bg-teal-400 text-white text-sm fira-code-bold py-2 px-3 rounded absolute top-[9.5rem] left-3"
 			>
 				<p>{{ project.description }}</p>
 			</div>
 		</div>
 		<div
-			class="project-actions space-y-4 sm:absolute right-3 top-3 bg-gray-600 rounded-full p-1 self-start border-2 border-gray-700"
+			class="project-actions space-y-4 absolute right-3 top-3 bg-gray-600 rounded-full p-1 self-start border-2 border-gray-700"
 			v-if="project.link || project.sourceCodeLink"
 		>
 			<a

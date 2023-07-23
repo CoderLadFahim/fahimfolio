@@ -72,6 +72,11 @@ const store = createStore({
 							iconPath:
 								'/TechLogos/pinia.png',
 						},
+                        {
+							name: 'TypeScript',
+							iconPath:
+								'/TechLogos/ts.png',
+						},
 						{
 							name: 'Bootstrap',
 							iconPath:

@@ -12,7 +12,7 @@ const projects = computed<ProjectInterface[]>(() => store.state.projects);
 <template>
 	<section id="projects-section" class="site-section">
 		<SectionTitle titleText="My.Projects" />
-		<div class="project-display">
+		<div class="project-display xl:ml-36 2xl:ml-0">
 			<Project v-for="(project, i) in projects" :project="project" :key="i" />
 		</div>
 	</section>
@@ -28,15 +28,12 @@ const projects = computed<ProjectInterface[]>(() => store.state.projects);
 		flex-col 
 	    items-center
 
-		sm:flex-row 
-		sm:flex-wrap 
-		sm:justify-center 
-		sm:space-y-0 
-		sm:gap-5 
-		sm:gap-y-10 
-		sm:items-start 
+	    sm:grid 
+	    sm:grid-cols-3 
+	    sm:grid-rows-3 
+	    sm:gap-y-12
+	    2xl:justify-items-center
 
 		md:space-y-0 
-		md:gap-10 
 }
 </style>
