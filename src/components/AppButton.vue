@@ -27,7 +27,7 @@ const handleBtnClick = (e: MouseEvent): void => emit("click", e);
 		:class="`app-button text-gray-600 border-transparent inline-block source-code-pro relative w-32 h-10 transition duration-150 hover:border ${props.btnParentClass} ${props.isDisabled ? 'hover:border-none' : 'hover:border hover:border-slate-600'}`"
 		@click="handleBtnClick">
 		<button :disabled="props.isDisabled" v-if="type === 'button'"
-			:class="`button  border pointer disabled:opacity-50 disabled:pointer-events-none border-slate-600 absolute transition duration-150 bg-gray-100 w-full h-full ${props.btnClass}`">
+			:class="`button border pointer disabled:opacity-50 disabled:pointer-events-none disabled:border-none absolute transition duration-150 bg-gray-100 w-full h-full ${props.btnClass}`">
 			{{ props.btnText }}
 		</button>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="company-card w-64 h-96 bg-white rounded-lg flex flex-col items-center shadow-lg shadow-gray-300">
+    <div class="company-card w-64 h-96 bg-white rounded-lg flex flex-col mb-16 items-center shadow-lg shadow-gray-300">
         <div class="company-logo flex flex-col items-center justify-start transform -translate-y-[3rem] space-y-5">
             <img class="border h-28 w-28 border-[0.20rem] border-indigo-200 rounded-full" :src="job.imgPath" alt="">
             <p class="source-code-pro text-teal-400 text-xl">{{ job.name }}</p>

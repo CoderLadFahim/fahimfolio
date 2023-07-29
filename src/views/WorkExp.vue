@@ -8,10 +8,10 @@ const store = useStore();
 </script>
 
 <template>
-	<section id="skills-section" class="site-section mt-40">
+	<section id="experience-section" class="site-section mt-40">
 		<SectionTitle titleText="Work.Experiences" />
 
-		<div class="company-card-wrapper flex justify-evenly items-center mt-28">
+		<div class="company-card-wrapper flex flex-wrap justify-evenly items-center mt-28">
 		    <CompanyCard v-for="(job, i) in store.state.jobs" :key="i" :job="job" />
 		</div>
 	</section>
